@@ -1,0 +1,57 @@
+head {
+    background-color: green;
+    text-align: center;
+    padding: 20px;   
+}
+
+body {
+    
+}
+
+.myhead {
+    text-align: center;
+    background-image: url(images/spheaderbg.jpg);   
+    z-index: 1;
+    position: relative;
+    font-size: 3.0em;
+    color: white;
+}
+
+.myhead .myimg {
+    z-index: -1;
+    position: absolute;
+    opacity: .2;
+}
+
+.footer {
+    text-align: center; 
+    font-size: .75em;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
