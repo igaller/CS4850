@@ -8,6 +8,16 @@ body {
     
 }
 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 500px;
+    height: 500px;
+}
+
 .myhead {
     text-align: center;
     background-image: url(images/spheaderbg.jpg);   
