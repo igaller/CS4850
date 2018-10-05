@@ -67,12 +67,10 @@ a:hover{
     word-wrap: break-word;
 }
 
-
-
 .block_sidebar{
     float:right;
     width:25%;
-    min-height: 800px;
+    height: 1550px;
     border:1px solid #ccc;
     padding:10px;
     box-sizing:border-box;
