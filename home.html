@@ -14,7 +14,9 @@
     body {
         margin: 0;
         padding: 0 .3em .3em .3em;
-        background-color: lightgray;
+        background-image: url(images/exb1.jpeg);
+        background-repeat: no-repeat;
+        background-size:cover;
     }
 
     .header {
@@ -40,7 +42,7 @@
     .header a.logo {
         font-size: 45px;
         font-weight: bold;
-        }
+    }
 
     .header a.active {
         background-color: #000;
@@ -61,11 +63,13 @@
         margin: 3px;
         overflow-wrap: break-word;
         word-break: break-word;
+        background-color: white;
     }
     
     .aside.top {
         width: 100%;
         border-bottom: 1px solid black;
+        background-color: white;
     }
 
     .column.body {
@@ -74,6 +78,7 @@
         word-break: break-word;
         margin: 3px;
         border: 1px solid black;
+        background-color: white;
     }
 
     .column.bottom {
@@ -83,12 +88,21 @@
         margin: 3px;
         padding: 3px;
         border: 1px solid black;
+        background-color: white;
     }
 
     .row:after {
         content: "";
         display: table;
         clear: both;
+    }
+    
+    p {
+        text-indent: 1.5em;
+    }
+    
+    h2 {
+        text-align: center;
     }
     
     footer {
@@ -99,7 +113,13 @@
         text-decoration: none;
         color: black;
         border: 1px solid black;
+        background-color: white;
         }
+    
+    footer a {
+        text-decoration: none;
+        color: black;
+    }
      
     @media screen and (max-width: 600px) {
         .column.side, .column.middle {
@@ -143,31 +163,30 @@
         		margin-right: auto;
 				max-width: 80%;
 				padding-bottom:20px;">
-  <p>Before you can begin learning how a subject works, it's important to understand why the subject matters- what it can do and why it has value. Understanding the reasoning behind Quantum Computing will help you understand its components. So let's get started.<br>
+            
+            <p>Before you can begin learning how a subject works, it's important to understand why the subject matters- what it can do and why it has value. Understanding the reasoning behind Quantum Computing will help you understand its components. So let's get started.</p>
 
-			You are most likely familiar with the classical computer, which runs on bits which can be either 0 or 1. The computer you're on now is a classical computer, and while it is fantastic for tasks such as browsing the internet, or typing a paper, there are some tasks that even our fastest classical computers have difficulty with. You see, right now your computer can only do one calculation at a time, and regardless of how fast your computer is, it can be extremely time consuming for large algorithms to find solutions with this limitation. Quantum computers on the other hand, do not have this limitation. <br>
+			<p>You are most likely familiar with the classical computer, which runs on bits which can be either 0 or 1. The computer you're on now is a classical computer, and while it is fantastic for tasks such as browsing the internet, or typing a paper, there are some tasks that even our fastest classical computers have difficulty with. You see, right now your computer can only do one calculation at a time, and regardless of how fast your computer is, it can be extremely time consuming for large algorithms to find solutions with this limitation. Quantum computers on the other hand, do not have this limitation.</p> 
+        
+			<p>Quantum computers work with qubits, which we will get into the nitty gritty of in future sections. For right now though, it is enough to imagine a qubit as having the possibility to be any combination of the classical bits 0 and 1. This allows processes, which normally would take an exuberant amount of time, to finish quickly. So a quantum computer has a much higher capability to complete algorithms. </p>
 
-			Quantum computers work with qubits, which we will get into the nitty gritty of in future sections. For right now though, it is enough to imagine a qubit as having the possibility to be any combination of the classical bits 0 and 1. This allows processes, which normally would take an exuberant amount of time, to finish quickly. So a quantum computer has a much higher capability to complete algorithms. <br>
+        <p>This quirky nature of the qubit will make a quantum computer the best candidate for two types of problems we have today: optimization and representation of molecular chemistry. For example, right now much of security relies on the factoring of numbers to protect information. The system will be based on the number "n", and the key to cracking the system would be to find two numbers "p" and "q" that n = p x q. This may seem silly as many people learn factoring at a young age, but finding the values chosen for a security system, from an extremely large number like:</p>
+	 <i>452349583472384710238947230897418341315948952183923475289347508374123419234898759328475028347508341341238740845720948750234987518457238475203485702394857209384754751984750243857209834752098475048751098734081723487350457459845763452349859234768274529384509345893478924953475928347523984572039485720394854572304857230948572348573048</i>
+           
+			<p>This could take billions of years for our current computers to do, but a much shorter time for a quantum computer to accomplish. So in this case, quantum computing has the obvious reward of being able to crack much of today's security.</p> 
+        
+			<p>As stated earlier, qubits are also prime for demonstrating the interactions that atoms have with other atoms. Qubits act similarly to nature- to the chemical behaviors of electrons, which means a quantum computer can simply study the actions of the qubits to see how molecules would interact in real life. In theory, a small quantum computer, with only a few dozen qubits would be able to model molecules that our fastest supercomputers are unable to. This could lead to major discoveries in medical fields as research teams would be able to use a quantum computer to gain a better understanding of chemical interactions.</p>
 
-			This quirky nature of the qubit will make a quantum computer the best candidate for two types of problems we have today: optimization and representation of molecular chemistry. For example, right now much of security relies on the factoring of numbers to protect information. The system will be based on the number "n", and the key to cracking the system would be to find two numbers "p" and "q" that n = p x q. This may seem silly as many people learn factoring at a young age, but finding the values chosen for a security system, from an extremely large number like:
-			<br>
-            <br>
-            <i>452349583472384710238947230897418341315948952183923475289347508374123419234898759328475028347508341341238740845720948750234987518457238475203485702394857209384754751984750243857209834752098475048751098734081723487350457459845763452349859234768274529384509345893478924953475928347523984572039485720394854572304857230948572348573048</i>
-            <br>
-                <br>
-			This could take billions of years for our current computers to do, but a much shorter time for a quantum computer to accomplish. So in this case, quantum computing has the obvious reward of being able to crack much of today's security. <br>
 
-			As stated earlier, qubits are also prime for demonstrating the interactions that atoms have with other atoms. Qubits act similarly to nature- to the chemical behaviors of electrons, which means a quantum computer can simply study the actions of the qubits to see how molecules would interact in real life. In theory, a small quantum computer, with only a few dozen qubits would be able to model molecules that our fastest supercomputers are unable to. This could lead to major discoveries in medical fields as research teams would be able to use a quantum computer to gain a better understanding of chemical interactions.<br>
-
-			</p>
   </div>
     
     <div class="column side">
         <div class="aside top">
             <h2>Clearing Out Misunderstandings</h2>
-                <p> When many people hear about a quantum computer, they see it as a replacement for today's computer, but this will most likely not be the case. Quantum computers will only provide speed advantages for certain types of problems - in essence, the system is only as good as the algorithms behind it. Right now classical computers utilize classical algorithms that are extremely effective at day to day tasks, and there wouldn't be a need for the average laptop user to own a quantum computer. So even if the personal quantum computers come out in the next few years, until new quantum algorithms are developed that improve the speed of day to day tasks, its safe to say that scientists will be the main quantum computer users. <br>
+                <p> When many people hear about a quantum computer, they see it as a replacement for today's computer, but this will most likely not be the case. Quantum computers will only provide speed advantages for certain types of problems - in essence, the system is only as good as the algorithms behind it. Right now classical computers utilize classical algorithms that are extremely effective at day to day tasks, and there wouldn't be a need for the average laptop user to own a quantum computer. So even if the personal quantum computers come out in the next few years, until new quantum algorithms are developed that improve the speed of day to day tasks, its safe to say that scientists will be the main quantum computer users. 
+                </p>    
 
-                The other misconception is that scientists have to wait to own their own quantum computers in order to develop algorithms, but thankfully this is not the case. Quantum computing is based off of quantum mechanics, and we have the knowledge of the basic components, and they are highly unlikely to change. The qubit and the gates that affect quantum logic will work the same regardless of the hardware we have, so for years scientists have been developing these algorithms. We will get to these algorithms soon, but before we can run, we have to be able to walk.</p>
+                <p>The other misconception is that scientists have to wait to own their own quantum computers in order to develop algorithms, but thankfully this is not the case. Quantum computing is based off of quantum mechanics, and we have the knowledge of the basic components, and they are highly unlikely to change. The qubit and the gates that affect quantum logic will work the same regardless of the hardware we have, so for years scientists have been developing these algorithms. We will get to these algorithms soon, but before we can run, we have to be able to walk.</p>
         </div>
       
   </div>
@@ -175,22 +194,16 @@
     <div class="column bottom">
         <h2>Why Quantum Computing Matters</h2>
             <p>If you've ever had the chance to watch the end clips of the Guardians of the Galaxy movie, you've seen a prime example of how a qubit acts. If you haven't, you can watch it here. </p> 
-            <br>
 
             <iframe style="display:block;
                 margin-left: auto;
                 margin-right: auto;"
                 width="560" 
                 height="315" 
-        src="https://www.youtube.com/embed/BEPbXYzE5_Y?rel=0&amp;controls=0&amp;showinfo=0"allowfullscreen>
-            </iframe>
-                
-            <br>
+        src="https://www.youtube.com/embed/BEPbXYzE5_Y?rel=0&amp;controls=0&amp;showinfo=0"allowfullscreen></iframe>
                 
 			<p>Groot, the dancing tree, acts like a qubit, and Drax, the alien sharpening his weapon is an observer, just like us. At any given moment, Groot can either be dancing or pausing, Drax has no idea. Drax can only tell what Groot is doing if he looks at Groot, and then immediately, Groot is locked into an action. In this clip Groot stops moving for as long as Drax is looking at him, and we can symbolize that with the 0 bit. However a qubit can also be paused as the 1 bit, in which case Groot would be dancing until Drax looked away again.</p>  
-                
-            <br>
-        
+                        
             <p>You might see how this is very different than an ordinary bit. For example if we just had a simple stick, we would notice that the stick does not move. We can represent it as a 0 bit. When we look away, we can guarantee that the stick will not be moving, as it is a stick. Classical bits are rigid; Qubits can dance. Because of this, they get different notations than bits.</p>  
         
             <br>
@@ -201,10 +214,10 @@
 <footer>
     Last Updated: October 15, 2018 | 
     <a href="home.html">Home</a> |
-    <a href="*">About</a> |
-    <a href="*">Quantum Info</a> |
-    <a href="*">Quantum Algorithm</a> |
-    <a href="*">Contact Us</a> |
+    <a href="/about/about.html">About</a> |
+    <a href="/quantuminfo/qinfo.html">Quantum Info</a> |
+    <a href="/quantumalgorithm/qalg.html">Quantum Algorithm</a> |
+    <a href="/contactus/contactus.html">Contact Us</a> |
     KSU IT4203 &copy; 2018
 </footer>
   
