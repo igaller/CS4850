@@ -1,11 +1,17 @@
 <!DOCTYPE HTML>
+
 <html>
+    
 <head>
+    
     <title>Quantum Computing</title>
+    
  <style>
+     
     * {
         box-sizing: border-box;
     }
+     
     body {
         margin: 0;
         padding: 0 .3em .3em .3em;
@@ -13,6 +19,7 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+     
     .header {
         overflow: hidden;
         padding: 10px 10px;
@@ -21,6 +28,7 @@
         color: black;
         border: 1px solid black;
         }
+     
     .header a {
         float: left;
         text-align: center;
@@ -36,16 +44,20 @@
         font-size: 45px;
         font-weight: bold;
     }
+     
     .header a.active {
         background-color: #000;
         }
+     
     .header-right {
         float: right;
         }
+     
     .column {
         float: left;
         padding: 10px;
     }
+     
     .column.side {
         width: 33%;
         border: 1px solid black;
@@ -54,11 +66,13 @@
         word-break: break-word;
         background-color: white;
     }
+     
     .aside.top {
         width: 100%;
         border-bottom: 1px solid black;
         background-color: white;
     }
+     
     .column.body {
         width: 65%;
         overflow-wrap: break-word;
@@ -67,6 +81,7 @@
         border: 1px solid black;
         background-color: white;
     }
+     
     .column.bottom {
         width: 99%;
         overflow-wrap: break-word;
@@ -76,14 +91,17 @@
         border: 1px solid black;
         background-color: white;
     }
+     
     .row:after {
         content: "";
         display: table;
         clear: both;
     }
+     
     p {
         text-indent: 1.5em;
     }
+     
     h2 {
         text-align: center;
     }
@@ -98,31 +116,42 @@
         border: 1px solid black;
         background-color: white;
         }
+     
     footer a {
         text-decoration: none;
         color: black;
     }
+     
     @media screen and (max-width: 600px) {
         .column.side, .column.middle {
             width: 100%;
         }
     }
+     
 </style>
+
 </head>
 
 <body>
-    <div class="header">
-        <a href="index.html" class="logo">Quantum Computing</a>
-
-    <div class="header-right">
-        <a class="active" href="../home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="/quantuminfo/qinfo.html">Quantum Info</a>
-        <a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a>
-        <a href="../contactus/contactus.html">Contact Us</a>
-    </div>
-    </div> 
-
+    
+<div class="header">
+    
+  <a href="index.html">Quantum Computing</a>
+    
+  <div class="header-right">
+      
+    <a class="active" href="../home.html">Home</a>
+      
+    <a href="../qutip/qutip.html">Qutip</a>
+      
+    <a href="../quantuminfo/qinfo.html">Quantum Info</a>
+      
+    <a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a>
+      
+    <a href="../contactus/contactus.html">Contact Us</a>
+  </div>
+    
+</div> 
     <!-- site main info -->
     <div class="row">
     <div class="column body">
@@ -142,7 +171,7 @@
                 padding-bottom:20px;">
     In this guide we will learn: 
     <br>
-    <p style="margin-left: 40px">
+    <div style="margin-left: 40px">
     1. Magnitude and Unit Vectors <br>
     2. Dimensions <br>
     3. Vector arithmetic <br>
@@ -156,7 +185,7 @@
     11. Matrix Inverse <br>
     12. Determinants <br>
     13. Bases and Orthogonal Bases <br>
-    </p>
+    </div>
     <br>
 
     <h2>Magnitude and Unit Vectors</h2>
