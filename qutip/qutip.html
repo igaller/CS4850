@@ -1,5 +1,7 @@
 <!DOCTYPE HTML>
+
 <html>
+    
 <head>
     <title>Quantum Computing</title>
 
@@ -12,7 +14,7 @@
     body {
         margin: 0;
         padding: 0 .3em .3em .3em;
-        background-image: url(../images/exb1.jpeg);
+        background-image: url(../images/exb1.jpg);
         background-repeat: no-repeat;
         background-size:cover;
     }
@@ -102,6 +104,19 @@
     h2 {
         text-align: center;
     }
+     
+     .buttons {
+        text-align: center;
+     }
+     
+     button a {
+         text-decoration: none;
+         color: black;
+     }
+     
+     button hover {
+         background-color: blue;
+     }
     
     footer {
         text-align: center; 
@@ -137,9 +152,9 @@
     
   <div class="header-right">
       
-    <a class="active" href="../home.html">Home</a>
+    <a href="../home.html">Home</a>
       
-    <a href="qutip.html">Qutip</a>
+    <a  class="active" href="qutip.html">Qutip</a>
       
     <a href="../quantuminfo/qinfo.html">Quantum Info</a>
       
@@ -151,12 +166,22 @@
 </div> 
     
 <div class="row">        
-    <!-- site main info -->
+
     <div class="column body">
-    
+    <h2>What is QuTip?</h2>
         
     </div>
     
+    <div class="column side">
+        <div class="aside top">
+            <h2>Where to Find Qutip</h2>
+            <div class="buttons">
+            <button><a href="http://qutip.org/index.html">Go to QuTip Site</a></button>
+            <button><a href="http://qutip.org/download.html">Download</a></button>
+                </div>
+    
+    </div>
+    </div>
     </div>
 
 <footer>
@@ -170,4 +195,5 @@
 </footer>
         
     </body>
+    
 </html>
