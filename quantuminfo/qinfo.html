@@ -99,13 +99,44 @@
         clear: both;
     }
      
+     .zoom {
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        -moz-transition:-moz-transform 0.3s ease-in; 
+        -webkit-transition:-webkit-transform 0.3s ease-in; 
+        -o-transition:-o-transform 0.3s ease-in;
+        -moz-transition:-moz-transform 0.3s ease-out; 
+        -webkit-transition:-webkit-transform 0.3s ease-out; 
+        -o-transition:-o-transform 0.2s ease-out;
+     }
+     .zoom a:hover {
+        font-family: 'Oswald', sans-serif;
+        color: #000000;
+        text-shadow:1px 0px #555;
+        -moz-transform:scale(1.03); 
+        -webkit-transform:scale(1.03);
+        -o-transform:scale(1.03);
+     }
+     
     p {
         text-indent: 1.5em;
     }
      
+    h1 {
+         
+         text-align: center;
+
+     }
+     
     h2 {
         text-align: center;
+        border-bottom: 1px solid black;
     }
+     
+    a {
+        text-decoration: none;
+        color: black;
+     }
     
     footer {
         text-align: center; 
@@ -216,7 +247,7 @@
 
     The superscript number can be any positive number, and we can represent it generally as R<sup>n</sup>. For the majority of this index we will deal with real numbers, and then later switch to complex numbers. If we are working with vectors with complex numbers the R<sup>n</sup> changes to C<sup>n</sup>. 
 
-        <h2><a id="addition">Basic Vector Maths</a></h2>
+        <h1><a id="addition">Basic Vector Maths:</a></h1>
     <h2>Addition</h2>
     If you're trying to add two vectors together, you add the corresponding components. The two vectors below can also be represented as: (1x+3y) and (5x+7y). The x components correspond with each other, and the y components correspond with each other. Notice in the example below that the size of the final matrix is the same size as the two matrices being added. 
     In order to add matrices, the matrices have to have the same number of rows and columns:
@@ -507,29 +538,31 @@
     <div class="column side">
         <div class="aside top">        
             <h2>Jump To . . . </h2>
-            <a href="qinfo.html#linearalg">Introduction to Linear Algebra</a>
+            <div class="zoom"><a href="qinfo.html#linearalg">Introduction to Linear Algebra</a></div>
             <br>
-            <a href="qinfo.html#magandunitv">Magnitude and Unit Vectors</a>
+            <div class="zoom"><a href="qinfo.html#magandunitv">Magnitude and Unit Vectors</a></div>
             <br>
-            <a href="qinfo.html#dimensions">Brief Discussion on Dimensions</a>
+            <div class="zoom"><a href="qinfo.html#dimensions">Brief Discussion on Dimensions</a></div>
             <br>
-            <a href="qinfo.html#addition">Basic Vector Maths: Addition</a>
+            <div class="zoom"><a href="qinfo.html#addition">Basic Vector Maths: Addition</a></div>
             <br>
-            <a href="qinfo.html#subtraction">Basic Vector Maths: Subtraction</a>
+            <div class="zoom"><a href="qinfo.html#subtraction">Basic Vector Maths: Subtraction</a></div>
             <br>
-            <a href="qinfo.html#scalarmulti">Scalar Multiplication</a>
+            <div class="zoom"><a href="qinfo.html#scalarmulti">Scalar Multiplication</a></div>
             <br>
-            <a href="qinfo.html#vectortimes">Vector Multiplication</a>
+            <div class="zoom"><a href="qinfo.html#vectortimes">Vector Multiplication</a></div>
             <br>
-            <a href="qinfo.html#innerdot">Inner Dot Product</a>
+            <div class="zoom"><a href="qinfo.html#innerdot">Inner Dot Product</a></div>
             <br>
-            <a href=""></a>
+            <div class="zoom"><a href=""></a></div>
             <br>
-            <a href=""></a>
+            <div class="zoom"><a href=""></a></div>
             <br>
-            <a href=""></a>
+            <div class="zoom"><a href=""></a></div>
             <br>
         </div>
+        
+        <div></div>
     
     </div>
             

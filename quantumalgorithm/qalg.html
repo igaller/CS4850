@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+<head>
+    
+<title>Quantum Computing</title>
+    
+ <style>
+     
+    * {
+        box-sizing: border-box;
+    }
+     
+    body {
+        margin: 0;
+        padding: 0 .3em .3em .3em;
+        background-image: url(../images/exb1.jpg);
+    }
+     
+    .header {
+        overflow: hidden;
+        padding: 10px 10px;
+        background-image: url(../images/banner.jpg);
+        opacity: 1.0;
+        color: black;
+        border: 1px solid black;
+        }
+     
+    .header a {
+        float: left;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 20px; 
+        line-height: 20px;
+        border-radius: 4px;
+        color: white;
+        }
+        
+    .header a.logo {
+        font-size: 45px;
+        font-weight: bold;
+    }
+     
+    .header a.active {
+        background-color: #000;
+        }
+     
+    .header-right {
+        float: right;
+        }
+     
+    .column {
+        float: left;
+        padding: 10px;
+    }
+     
+    .column.side {
+        width: 33%;
+        border: 1px solid black;
+        margin: 3px;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        background-color: white;
+        
+        position: fixed;
+        right: 1.5px;
+    }
+     
+    .aside.top {
+        width: 100%;
+        border-bottom: 1px solid black;
+        background-color: white;
+    }
+     
+    .column.body {
+        width: 65%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        margin: 3px;
+        border: 1px solid black;
+        background-color: white;
+    }
+     
+    .column.bottom {
+        width: 99%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        margin: 3px;
+        padding: 3px;
+        border: 1px solid black;
+        background-color: white;
+    }
+     
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+     
+     .zoom {
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        -moz-transition:-moz-transform 0.3s ease-in; 
+        -webkit-transition:-webkit-transform 0.3s ease-in; 
+        -o-transition:-o-transform 0.3s ease-in;
+        -moz-transition:-moz-transform 0.3s ease-out; 
+        -webkit-transition:-webkit-transform 0.3s ease-out; 
+        -o-transition:-o-transform 0.2s ease-out;
+     }
+     
+     .zoom a:hover {
+        font-family: 'Oswald', sans-serif;
+        color: #000000;
+        text-shadow:1px 0px #555;
+        -moz-transform:scale(1.03); 
+        -webkit-transform:scale(1.03);
+        -o-transform:scale(1.03);
+     }
+     
+    p {
+        text-indent: 1.5em;
+    }
+     
+    h1 {
+         
+         text-align: center;
+
+     }
+     
+    h2 {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+     
+    a {
+        text-decoration: none;
+        color: black;
+     }
+    
+    footer {
+        text-align: center; 
+        font-size: .8em;
+        color: black;
+        opacity: .9;
+        text-decoration: none;
+        color: black;
+        border: 1px solid black;
+        background-color: white;
+        }
+     
+    footer a {
+        text-decoration: none;
+        color: black;
+    }
+     
+    @media screen and (max-width: 600px) {
+        .column.side, .column.middle {
+            width: 100%;
+        }
+    }
+     
+</style>
+
+</head>
+
+<body>
+    
+<div class="header">
+    
+  <a href="index.html" class="logo">Quantum Computing</a>
+    
+  <div class="header-right">
+      
+    <a href="../home.html">Home</a>
+      
+    <a href="../qutip/qutip.html">Qutip</a>
+      
+    <a class="active" href="../quantuminfo/qinfo.html">Quantum Info</a>
+      
+    <a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a>
+      
+    <a href="../contactus/contactus.html">Contact Us</a>
+  </div>
+    
+</div> 
+   
+<div class="row">
+    
+    <div class="column body">
+        <h2>Shor’s Algorithm</h2>
+        <p>Description: If there was a golden child of quantum computing, it would be Shor’s algorithm. Shor’s algorithm is an incredibly important algorithm in quantum computing that has the capability of making a huge impact on current web security. Current computers depend heavily on RSA encryption, which gives each message two keys: the public key which is used to encrypt the messages, and the private key, which is used to decrypt the message. Here is one way how the two keys are generated:</p>
+            <ol>
+                <li>The two keys are generated from the equation n = pq where p and q are two large prime numbers. </li>
+                <li>Find the totient, which is the number of integers that are smaller than n and are also coprime with n: o(n) = (p-1)(q-1). Coprime means that the greatest common denominator between the integers is 1. </li>
+                <li>The public key is made out of a chosen coprime integer exponent e, that is greater than 1 and less than o(n) and n.  (n, e)</li>
+                <li>The private key is made out of an integer exponent d= (1+ko(n))/e) where k is an integer, and n.  (n, d)</li>
+            </ol>
+        <p>The Encryption function is: c = m<sup>e</sup>modn</p>
+            <p>The Decryption function is: m = c<sup>d</sup>modn</p>
+        <p>Classical computers can find the private key using a tactic called the number field sieve, but the algorithm has an incredibly large time complexity: a superpolynomial in the size of the input: O (exp [c(ln n)1/3(ln ln n)2/3]. It is theorized however, that with quantum computers and Shor’s algorithm, the RSA encryption can be cracked in an incredibly shorter amount of time: O ((logn)2(loglogn)) on a quantum computer and O(logn) on a classical computer. Let’s get into the math behind Shor’s algorithm. </p>
+        
+        <p>Shor’s algorithm consists of types of computing:</p>
+        <ul>
+            <li>Classical computing: Reducing the factoring problem to a period finding problem. </li>
+            <li>Quantum computing: using a similar problem, period finding, so solve the order-finding problem</li>
+        </ul>
+        <p>Classical Part: Turning the factoring problem into the period finding problem</p>
+        <ol>
+            <li>Pick a random number a that a &lt N, where N is the prime number we are trying to factor. Find the greatest common divisor of a and N. There are many different algorithms for finding this value, such as the Euclidean algorithm, binary method, or Thomae’s method. If the gcd is not equal to 1, we are done. </li>
+            <li></li>
+            <li></li>
+        </ol>
+        <p>QuTip Walkthrough:</p>
+        <h2>Grover’s Algorithm</h2>
+        <p>Description: Grover’s algorithm is a probabilistic search algorithm that was developed for searching through an unsorted database. Another explanation for what Grover can do is inverting a function. For example, if we have y=f(x), the Grover algorithm will calculate x when given y.  If there are N entries in the database, Grover’s algorithm has a theoretical efficiency of O(sqrtN) while classical algorithms will have a worst time of O(N). So if we had a list of 1000 items, worst case, a classical algorithm would take 10,000 steps. Grover’s algorithm however, could do it in 100 steps! As you can see, Grover’s would provide quadratic speed up in searching. It’s important to note that because it is probabilistic, meaning its not 100% correct each time, running the algorithm multiple times can increase accuracy. 
+        </p>
+        <p>The Grover algorithm takes advantage of a procedure called the amplitude amplification. What this basically means is the amplitude of the marked item, the item we are looking for, is amplified, and the other amplitudes of the other items are repeatedly shrunk. Let’s say we had a two qubit system where the possible value are { 00, 01, 10, 11 }. We can label these respectively states 1,2,3,4. For this example, we’ll say that we’re looking for state 3, and we can label this w- our winner state. The end goal is for w to return 1, and for each other state to return 0. </p>
+        <image>8****image*****</image>
+        <p>This is done in the following series of steps: </p>
+        <ol>
+            <li>Set the </li>
+        </ol>
+        <p>Gates: Hadamard O(+-f) oracle gate, D gate (Grover diffusion operator), measurement</p>
+        <image>*****image*****</image>
+        <p>QuTip Walkthrough:</p>
+        <h2>Deutsch's algorithm</h2>
+        <b>Description: </b>
+        <p>Deutsch’s algorithm is a probabilistic algorithm, meaning that it is not always successful, and in particular this algorithm is right half of the time. It was created in order to show how quantum computers can be used, but it doesn’t solve an important programming issue. It is however useful in illustrating how to manipulate qubits and how they work. The Deutsch algorithm tests whether a function f is constant OR balanced. <br>
+        This means that EITHER:
+        </p>
+        <ol>
+            <li>All configurations or groupings of bits map to the same value. </li>
+            <li>The configurations map to different values</li>
+        </ol>
+        <p>So we can have f(0) or f(1) map to 0 or 1.  The algorithm tests the function f to see whether the function is one to one (balanced), meaning that each x value has exactly one y value, and each y value has exactly one x value, or if it is not one to one and is therefore constant. Remember that quantum algorithms use unitary transformations, which are reversible. So we have to receive a value that we can put back in the transformation and get the original values. This is illustrated below.</p>
+        <image>******image******</image>
+        <p>Once the transformations have been made, the answer is derived from the first qubit. If the qubit is equal to 1, the function f is balanced. If the first qubit is equal to 0, the function f is constant.</p>
+        <p><b>Gates:</b>Hadamard Gate is always used. CNOT or NOT Gate is used. Measurement Gate. Quantum Oracle U</p>
+        <image>******image******</image>
+        <b>QuTip Walkthrough: </b>
+        <ol>
+            <li>When implementing Deutsch’s algorithm, we make sure we are importing qutip and scipy to able to call the proper functions:</li>
+            <image>******image******</image>           <li>After import, we need to create an input string to set the values for the function that will run be evaluated by the algorithm. The possible function values are {0,0}, {0,1}, {1,0}, and {1,1}</li>
+            <image>******image******</image>           <li>The next step will be to create the qubits for the algorithm. We will be using the basis() to determine the vector representation of Fock states. The first integer determines the number of states where the 2nd integer is the value of the qubit:</li>
+            <image>******image******</image> 
+            <li>After creating the qubits, we need to create the gates that will be attached to the circuit depending on the input function: 
+            <image>******image******</image>In the example function provided, we will be using the CNOT gate. This will determine the observable value of the qubit.</li>
+            <li>Once the gates are created, we loop through to determine which gate will the input function will go through based on its values:
+            <image>******image******</image>If the value is not valid, the script will exit.</li>
+            <li>We then combine the states of the qubits and find the result from the states. Tensor takes the value of state vectors or operators and returns a composite quantum object for the combined Hilbert space. (For a refresher, a Hilbert Space is an abstract vector space possessing the structure of an inner product that allows length and angle to be measured.) </li>
+            <image>******image******</image>
+            <li>Finally we will print the results of the algorithm: 
+            <image>******image******</image>Ensure that the script file is within your qutip environment before you run this file within your console!</li>
+        </ol>
+        <b>Example Output with a function {0, 1}:</b>
+        <image>******image******</image>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+     
+    <div class="column side">
+        <div class="aside top">        
+            <h2>Jump To . . . </h2>
+            <div class="zoom"><a href="qinfo.html#linearalg">Introduction to Linear Algebra</a></div>
+            <br>
+            <div class="zoom"><a href="qinfo.html#magandunitv">Magnitude and Unit Vectors</a></div>
+            <br>
+            <div class="zoom"><a href="qinfo.html#dimensions">Brief Discussion on Dimensions</a></div>
+            <br>
+            <div class="zoom"><a href="qinfo.html#addition">Basic Vector Maths: Addition</a></div>
+            <br>
+            <div class="zoom"><a href="qinfo.html#subtraction">Basic Vector Maths: Subtraction</a></div>
+            <br>
+            <div class="zoom"><a href="qinfo.html#scalarmulti">Scalar Multiplication</a></div>
+            <br>
+            <div class="zoom"><a href="qinfo.html#vectortimes">Vector Multiplication</a></div>
+            <br>
+            <div class="zoom"><a href="qinfo.html#innerdot">Inner Dot Product</a></div>
+            <br>
+            <div class="zoom"><a href=""></a></div>
+            <br>
+            <div class="zoom"><a href=""></a></div>
+            <br>
+            <div class="zoom"><a href=""></a></div>
+            <br>
+        </div>
+    </div>
+    </div>
+
+<footer>
+    Last Updated: October 15, 2018 | 
+    <a href="../home.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="../quantuminfo/qinfo.html">Quantum Info</a> |
+    <a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a> |
+    <a href="../contactus/contactus.html">Contact Us</a> |
+    KSU IT4203 &copy; 2018
+</footer>
+    
+</body>
+
+</html>
