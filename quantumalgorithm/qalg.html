@@ -8,6 +8,7 @@
     
  <style>
      
+     
     * {
         box-sizing: border-box;
     }
@@ -236,7 +237,7 @@
             <li>Find the gcd of m<sup>r/2</sup>-1 and n using the Euclidean algorithm again. The answer, d, is a factor of N! </li>
         </ol>
 
-<h2>Understanding the Importance of Period Finding</h2>
+<h2><a id="period">Understanding the Importance of Period Finding</a></h2>
         
 <p>We can change the problem of factorization into a problem for period finding because of a few properties that Leonhard Euler discovered. Before we get to that point, let’s look at an integral part of period finding.</p>
 
@@ -277,7 +278,7 @@ QuTip Walkthrough:
 
 <p>Before we go into the steps, we will have to define two gates: The oracle O(+-f) gate and the Grover Diffusion Operator- represented by the D gate. </p> 
         
-<p>The oracle gate is:
+        <p>The oracle gate is:</p>
 
    <image>*********</image> 
     
@@ -307,9 +308,9 @@ QuTip Walkthrough:
 This is for 2 qubits: {0,1} and their various combined states. You can add more qubits, and they’d still go through each gate listed below. </p>
 
 
-<h2>QuTip Walkthrough:</h2>
+<h4>QuTip Walkthrough:</h4>
 
-<h3>Deutsch's algorithm</h3>
+<h2><a id="deutsch">Deutsch's algorithm</a></h2>
 <p>Description: 
 Deutsch’s algorithm is a probabilistic algorithm, meaning that it is not always successful, and in particular this algorithm is right half of the time. It was created in order to show how quantum computers can be used, but it doesn’t solve an important programming issue. It is however useful in illustrating how to manipulate qubits and how they work. The Deutsch algorithm tests whether a function f is constant OR balanced. 
 This means that EITHER:</p>
@@ -323,7 +324,7 @@ This means that EITHER:</p>
 
 <p>Once the transformations have been made, the answer is derived from the first qubit. If the qubit is equal to 1, the function f is balanced. If the first qubit is equal to 0, the function f is constant.</p>
 
-<p>Gates: Hadamard Gate is always used. CNOT or NOT Gate is used. Measurement Gate. Quantum Oracle U</p>
+<p><b>Gates</b>: Hadamard Gate is always used. CNOT or NOT Gate is used. Measurement Gate. Quantum Oracle U</p>
 
 
 
@@ -356,7 +357,7 @@ This means that EITHER:</p>
 <h4>Example Output with a function {0, 1}:</h4>
 
 
-<h3>Deutsch-Jozsa algorithm</h3>
+<h2><a id="jozsa">Deutsch-Jozsa algorithm</a></h2>
         
 <p>Description: The Deutsch-Jozsa algorithm is a deterministic algorithm, meaning that if you put a specific input into this algorithm, you are guaranteed the same output each time. It has the same purpose as the Deutsch algorithm, however this algorithm is for functions with many bits, not just 2. The Deutsch-Jozsa algorithm tests whether a function f is constant OR balanced. This algorithm is a better example of how quantum computing algorithms can solve issues faster than classical computer, because by using this algorithm it only takes one evaluation of U, while a classical algorithm would have to evaluate the function f at least 2n-1+1 times to solve. This is a dramatic improvement.
 This means that EITHER:</p>
@@ -390,11 +391,11 @@ Finally, we will run the quantum circuit and print out the results. Similar to t
     <div class="column side">
         <div class="aside top">        
             <h2>Jump To . . . </h2>
-            <div class="zoom"><a href="qinfo.html#shor">Shor's Algorithm</a></div>
-            <div class="zoom"><a href="qinfo.html#period">Understanding the Importance of Period Finding</a></div>
-            <div class="zoom"><a href="qinfo.html#grover">Grover's Algorithm</a></div>
-            <div class="zoom"><a href="qinfo.html#deutsch">Deutsch's Algorithm</a></div>
-            <div class="zoom"><a href="qinfo.html#jozsa">Deutsch-Jozsa Algorithm</a></div>
+            <div class="zoom"><a href="qalg.html#shor">Shor's Algorithm</a></div>
+            <div class="zoom"><a href="qalg.html#period">Understanding the Importance of Period Finding</a></div>
+            <div class="zoom"><a href="qalg.html#grover">Grover's Algorithm</a></div>
+            <div class="zoom"><a href="qalg.html#deutsch">Deutsch's Algorithm</a></div>
+            <div class="zoom"><a href="qalg.html#jozsa">Deutsch-Jozsa Algorithm</a></div>
 
         </div>
     </div>
