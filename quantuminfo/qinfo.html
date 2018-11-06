@@ -144,7 +144,7 @@
 <div class="header">
     
   <a href="index.html" class="logo">Quantum Computing</a>
-    <a id="quantumcomputing">
+    <a id="quantumcomputing"></a>
   <div class="header-right">
       
     <a href="../home.html">Home</a>
@@ -282,13 +282,13 @@
 
         <h2><a id="vectortimes">Vector Multiplication</a></h2>
     <p>
-    Multiplying two vectors is a bit more complicated than addition, subtraction, or scalar multiplication, but with some practice you'll get the hang of it. There are a few simple rules you have to know in order to properly multiply matrices: <br>
+    Multiplying two vectors is a bit more complicated than addition, subtraction, or scalar multiplication, but with some practice you'll get the hang of it. There are a few simple rules you have to know in order to properly multiply matrices:</p> <br>
     <p style="margin-left: 40px"> 1. You can only multiply matrices if matrix A has the same number of columns as the number of rows in matrix B. So if matrix A is a 2x3 matrix, and matrix B is a 3x4 matrix, you can complete the equation AxB. <br></p>
     <p style="margin-left: 40px"> 2. The result of the matrix changes if you change from AxB to BxA, and you may not be able to multiply BxA if it does not fulfill rule 1. <br></p>
     <p style="margin-left: 40px"> 3. To multiply two matrices, follow the row column multiplication. For example, let's say you have the equation AxB=C, you take the numbers in the first row of matrix A and multiply them against the numbers in the first column of matrix B and add the products. Your result will be the number in the first row and first column in matrix C. <br></p>
     <p style="margin-left: 40px"> 4. If you can multiply AxB, the resulting matrix will have the same number of rows as matrix A, and the same number of columns in matrix B. 
     <br></p>
-    These concepts are illustrated below:
+    <p>These concepts are illustrated below:
 	</p>
 	<p>
     Rule Number 1 & 2: As you can see in the examples below, you can only multiply matrices if they number of columns in matrix A equals the number or rows in matrix B:
@@ -468,7 +468,7 @@
     <p>
     When we get a matrix into row echelon or reduced echelon form, we can actually see how many solutions the matrix is going to have. Matrices can have: 0, 1, or infinite solutions. </p>
     <p>
-    A matrix with 0 solutions is: an inconsistent matrix. This matrix can have all 0s in a row, and then have a nonzero in the augmented part of the matrix in the same row. 
+    A matrix with 0 solutions is: an inconsistent matrix. This matrix can have all 0s in a row, and then have a nonzero in the augmented part of the matrix in the same row. </p>
     <p>
     A matrix with 1 solution is: a matrix that has a leading coefficient in each column.</p>
     <p>
@@ -554,12 +554,11 @@
     A matrix that is not invertible is known as a singular matrix.</p>
     <p>
     There are a few methods for discerning whether or not a matrix is invertible:
-    <div style="margin-left: 40px">
-    1. The matrix is a square matrix. It is nxn. <br>
-    2. The determinant is nonzero. <br>
-    3. There is a pivot position in each column, meaning the columns of the matrix are linearly independent.<br>
+    1. The matrix is a square matrix. It is nxn. 
+    2. The determinant is nonzero. 
+    3. There is a pivot position in each column, meaning the columns of the matrix are linearly independent.
 	4. Matrix A is row equivalent and column equivalent to its identity matrix. This means that Matrix A can be transformed into its identity matrix with simple row operations.
-	</div>
+	
 	</p>
 	<p>
     Now that we know the rules for quickly guessing if a matrix has an inverse, we can look at the methods for finding the inverse of the matrix. The basic premise is setting up the matrix [ A I ], I being the identity matrix, and performing row operations until we get the side where A is to be equivalent to the identity matrix. The new values on the right side of the matrix, where I used to be will be the values of A<sup>-1</sup>. </p>
@@ -679,36 +678,36 @@
                 padding-bottom:20px;">
     <p>
     Here we know that the vectors will be 2 dimensional and only contain real numbers. We also have the constraint that x<sub>1</sub> has to be greater than or equal to 0. The value x<sub>2</sub> has no constraints on it and can be negative or positive. 
-    <div style="margin-left: 40px">
+    
     Let's try rule 1, the inclusion of the zero vector: It passes because according to the constraints, both values can be equal to 0. <br>
 
     Let's try rule 3, closed under vector addition: The constraint tells us that all values of x1 will be greater than 0, and a positive number plus a positive number is a positive. So we know that this set of vectors is closed under addition. <br>
 
     Let's try rule 2, closed under scalar multiplication: Scalars can be positive, negative, or 0. If you multiply a positive number (which x1 has to be) by a negative, the product is a negative. If x1 has a negative value, the vector no longer fits the constraint. So we now know that this set of vectors are not a subspace. <br>
-	</div></p>
+	</p>
 
 	<h2><a id="basisforavector">Basis for a Vector Space</a></h2>
 	<p>
     A basis B of a vector space V is a set of vectors that meet two criteria:
-    <div style="margin-left: 40px">
+    
     1. Spans V <br>
     2. B is linearly independent<br>
-	</div>
+        </p>
 	<p>
     A standard basis, or a natural basis, are composed of vectors like: 
-    <div style="margin-left: 40px">
+    
     - e<sub>1</sub> = (1, 0, 0, ..., 0) <br>
     - e<sub>2</sub> = (0, 1, 0, ..., 0) <br>
     - e<sub>n</sub> = (0, 0, ..., 1) <br>
     Where n is the dimension you are working in, such as R<sup>2</sup> or R<sup>6</sup>. 
-    </div></p></p></p>
+    </p>
     <p>
     There are are few steps to create a basis from a set of vectors:
-    <div style="margin-left: 40px">
+    
     1. Take the set of vectors and create an augmented matrix <br>
     2. Use row operations to transform the matrix to reduced echelon form<br>
     3. Pick out the columns with leading 1's, and match these columns up with the vectors in the original matrix. Your basis will be a set that contains only those vectors <br>
-	</div>
+	
 	</p>
     <p>
     Let's try it out with an example with the following vector set:</p>
@@ -719,7 +718,7 @@
                 max-width: 80%;
                 padding-bottom:20px;">
     <p>
-    Notice how the basis is composed of 3 vectors, and each vector has 3 elements in it, and is in R<sup>3</sup>. Every basis will have n vectors where R<sup>n</sup>.
+    Notice how the basis is composed of 3 vectors, and each vector has 3 elements in it, and is in R<sup>3</sup>. Every basis will have n vectors where R<sup>n</sup>.</p>
      
     <h2><a id="orthonormal">Orthonormal Basis</a></h2>
     <p>
@@ -735,7 +734,7 @@
                 max-width: 80%;
                 padding-bottom:20px;"></p>
     <p>
-	If you were to solve this equation you would get: <span>&#8730;(-1)</span></p></p>
+	If you were to solve this equation you would get: <span>&#8730;(-1)</span></p>
 
     <p>
 	Now this number does not exist in the real numbers set, but if we expand into the complex numbers set, and we make i = <span>&#8730;(-1)</span>, we can now find the solutions to more equations.</p>
@@ -836,19 +835,19 @@
 	A complex number is simply the addition or subtraction of a real number and an imaginary number. It takes the form of: a + bi<sup>n</sup> where a, b, and n are real numbers, and i represents any imaginary number. It's important to remember that the value bi<sup>n</sup> is in total, an imaginary number.</p>
 	<p>
 	Here are some examples of complex numbers: 
-	<div style="margin-left: 40px">
+	
     3 + 5i <br>
     2 - 7i<sup>5</sup> <br>
     2 - <span>&#8730;(-69)</span> <br>
     123 + <span>&#8730;(-234)</span> <br>
-	</div>
+	
 	</p>
 	<p>
 	Complex numbers that have an exponent of 1 can be plotted on the complex plane, which looks similar to the real numbers plane you have most likely dealt with before. To map the complex number on the plane you need to transform it into an ordered pair. 
-	<div style="margin-left: 40px">
+	
     1. The real number becomes the "x coordinate" <br>
     2. The imaginary number becomes the "y coordinate" <br>
-	</div></p>
+	</p>
 	<p>
 	Notice that "x coordinate" and "y coordinate" are in parenthesis. That's because I used the terms that are appropriate for the real numbers plane. Complex numbers, however do not have an x and y plane, they have the real numbers plane and the complex numbers plane. But if it's easier to remember and visual, you can equate the complex plane with the y plane, and the real numbers plane with the x plane. </p>
 
@@ -877,13 +876,13 @@
 	<p>
 	For example, let's say we have the complex numbers: 
 	2+5i  and 4-6i, if we wanted to subtract them, we would do the following:
-	<div style="margin-left: 40px">
+	
     1. Set up the expression:(2+5i) - (4-6i) <br>
     2. We then foil the minus sign to the second complex number so we can get rid of the parentheses: 2+5i - 4 + 6i  <br>
     3. We can then combine like terms, which means combining the real numbers and combining the imaginary numbers: (2-4) + (5i+6i) <br>
     4. Then we add or subtract and get our final answer: -2 + 11i <br>
     * Adding is a similar process
-	</div> </p>
+	</p>
 	
 	Multiplication: 
 	<p>
@@ -946,6 +945,7 @@
                 "> </p>
 
     <h2><a id="quantumgates">Quantum Gates</a></h2>
+
     <p>
 	The most common representation of a qubit is modeled with an electron and its spin. The state of the qubit can be visualized using a Bloch Sphere where the current value is represented by &#936. The sphere has 3 axises and the spin is any location inside of the sphere. The Z axis is used to measure the the value of the qubit. If the qubit returns a value of 0, the location is at +Z on top of the sphere. If the value reads 1, the location is at -Z on the bottom of the sphere. In other words, you can think of a qubit value of 0 being the electron in its spin up state and the qubit value of 1 being the electron in the spin down state. Gates are used as operations on the qubit. An operation on a qubit is the rotation of the qubit state to a different point on the Bloch Sphere. There are multiple types of gates with some that operate on single qubit and others that operate on multiple qubits. The single qubit gates are the simplest to represent with matrices. 
 	<img src="../images/image.1.png" 
@@ -1066,9 +1066,10 @@
 </div>
     
     <div class="column side">
+        
         <div class="aside top">        
             <h2>Jump To . . . </h2>
-            <a href="qinfo.html#linearalg"><h1>Introduction to Linear Algebra</h1></a>
+            <a href="qinfo.html#linearalg">Introduction to Linear Algebra</a>
             <br>
             <a href="qinfo.html#magandunitv">Magnitude and Unit Vectors</a>
             <br>
@@ -1104,7 +1105,7 @@
             <br>
             <a href="qinfo.html#orthonormal">Orthonormal Basis</a>
             <br>
-            <a href="qinfo.html#complexnumbers"><h1>Introduction to Complex Numbers</h1></a><br>
+            <a href="qinfo.html#complexnumbers">Introduction to Complex Numbers</a><br>
             <a href="qinfo.html#withi">Properties of and Operations with i</a>
             <br>
             <a href="qinfo.html#additionandsubtraction">Addition and Subtraction</a>
@@ -1115,7 +1116,7 @@
             <br>
             <a href="qinfo.html#operationsofcomplex">Operations and Properties of Complex Numbers</a>
             <br>
-            <a href="qinfo.html#quantumgates"><h1>Quantum Gates</h1></a>
+            <a href="qinfo.html#quantumgates">Quantum Gates</a>
             <br>
             <a href="qinfo.html#pauli">Pauli Gates</a>
             <br>
@@ -1125,16 +1126,13 @@
             <br>
             <a href="qinfo.html#controlled">Controlled Gates</a>
             <br>
-            <br>
-            <br>
-            <a href="qinfo.html#quantumcomputing">^^ Return to top ^^
+            <a href="qinfo.html#quantumcomputing">^^ Return to top ^^</a>
             <br>
 
         </div>
 
     </div>
-            
-    </div>
+
 
 <footer>
     Last Updated: October 15, 2018 | 
