@@ -66,14 +66,15 @@
         
         position: fixed;
         right: 1.5px;
-        overflow-y: auto;
         font-size: .9em;
+        display: flex;
     }
      
     .aside.top {
         width: 100%;
         border-bottom: 1px solid black;
         background-color: white;
+        line-height: 1.3;
     }
      
     .column.body {
@@ -101,7 +102,7 @@
         clear: both;
     }
      
-     .zoom {
+    .zoom {
         font-family: 'Oswald', sans-serif;
         text-decoration: none;
         -moz-transition:-moz-transform 0.3s ease-in; 
@@ -112,7 +113,7 @@
         -o-transition:-o-transform 0.2s ease-out;
      }
      
-     .zoom a:hover {
+    .zoom a:hover {
         font-family: 'Oswald', sans-serif;
         color: #000000;
         text-shadow:1px 0px #555;
@@ -125,21 +126,20 @@
         text-indent: 1.5em;
     }
      
-    h1 {
-         
-         text-align: center;
-
-     }
-     
     h2 {
         text-align: center;
-        border-bottom: 1px solid black;
     }
      
-    a {
+     a {
         text-decoration: none;
         color: black;
      }
+
+    h1 {
+    	font-size: 21px;
+        font-weight: bold;
+        display: inline;
+    }
     
     footer {
         text-align: center; 
@@ -191,7 +191,7 @@
 <div class="row">
     
     <div class="column body">
-        <h2>Shor’s Algorithm</h2>
+        <h2><a id="shor">Shor’s Algorithm</a></h2>
 <p>Description: If there was a golden child of quantum computing, it would be Shor’s algorithm. Shor’s algorithm is an incredibly important algorithm in quantum computing that has the capability of making a huge impact on current web security. Current computers depend heavily on RSA encryption, which gives each message two keys: the public key which is used to encrypt the messages, and the private key, which is used to decrypt the message. Here is one way how the two keys are generated:</p>
         
  <ol>     
@@ -268,9 +268,7 @@ QuTip Walkthrough:
 
 
 
-
-
-<h2>Grover’s Algorithm</h2>
+<h2><a id="grover">Grover’s Algorithm</a></h2>
         
 <p>Description: Grover’s algorithm is a probabilistic search algorithm that was developed for searching through an unsorted database. Another explanation for what Grover can do is inverting a function. For example, if we have y=f(x), the Grover algorithm will calculate x when given y.  If there are N entries in the database, Grover’s algorithm has a theoretical efficiency of O(sqrtN) while classical algorithms will have a worst time of O(N). So if we had a list of 1000 items, worst case, a classical algorithm would take 10,000 steps. Grover’s algorithm however, could do it in 100 steps! As you can see, Grover’s would provide quadratic speed up in searching. It’s important to note that because it is probabilistic, meaning its not 100% correct each time, running the algorithm multiple times can increase accuracy.</p> 
 
@@ -392,28 +390,12 @@ Finally, we will run the quantum circuit and print out the results. Similar to t
     <div class="column side">
         <div class="aside top">        
             <h2>Jump To . . . </h2>
-            <div class="zoom"><a href="qinfo.html#linearalg">Introduction to Linear Algebra</a></div>
-            <br>
-            <div class="zoom"><a href="qinfo.html#magandunitv">Magnitude and Unit Vectors</a></div>
-            <br>
-            <div class="zoom"><a href="qinfo.html#dimensions">Brief Discussion on Dimensions</a></div>
-            <br>
-            <div class="zoom"><a href="qinfo.html#addition">Basic Vector Maths: Addition</a></div>
-            <br>
-            <div class="zoom"><a href="qinfo.html#subtraction">Basic Vector Maths: Subtraction</a></div>
-            <br>
-            <div class="zoom"><a href="qinfo.html#scalarmulti">Scalar Multiplication</a></div>
-            <br>
-            <div class="zoom"><a href="qinfo.html#vectortimes">Vector Multiplication</a></div>
-            <br>
-            <div class="zoom"><a href="qinfo.html#innerdot">Inner Dot Product</a></div>
-            <br>
-            <div class="zoom"><a href=""></a></div>
-            <br>
-            <div class="zoom"><a href=""></a></div>
-            <br>
-            <div class="zoom"><a href=""></a></div>
-            <br>
+            <div class="zoom"><a href="qinfo.html#shor">Shor's Algorithm</a></div>
+            <div class="zoom"><a href="qinfo.html#period">Understanding the Importance of Period Finding</a></div>
+            <div class="zoom"><a href="qinfo.html#grover">Grover's Algorithm</a></div>
+            <div class="zoom"><a href="qinfo.html#deutsch">Deutsch's Algorithm</a></div>
+            <div class="zoom"><a href="qinfo.html#jozsa">Deutsch-Jozsa Algorithm</a></div>
+
         </div>
     </div>
     </div>
