@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
 
 <html>
-    
+
 <head>
-    
+
 <title>Quantum Computing</title>
-    
+
  <style>
-     
-     
+
+
     * {
         box-sizing: border-box;
     }
-     
+
     body {
         margin: 0;
         padding: 0 .3em .3em .3em;
         background-image: url(../images/exb1.jpg);
     }
-     
+
     .header {
         overflow: hidden;
         padding: 10px 10px;
@@ -27,36 +27,36 @@
         color: black;
         border: 1px solid black;
         }
-     
+
     .header a {
         float: left;
         text-align: center;
         padding: 12px;
         text-decoration: none;
-        font-size: 20px; 
+        font-size: 20px;
         line-height: 20px;
         border-radius: 4px;
         color: white;
         }
-        
+
     .header a.logo {
         font-size: 45px;
         font-weight: bold;
     }
-     
+
     .header a.active {
         background-color: #000;
         }
-     
+
     .header-right {
         float: right;
         }
-     
+
     .column {
         float: left;
         padding: 10px;
     }
-     
+
     .column.side {
         width: 33%;
         border: 1px solid black;
@@ -64,20 +64,20 @@
         overflow-wrap: break-word;
         word-break: break-word;
         background-color: white;
-        
+
         position: fixed;
         right: 1.5px;
         font-size: .9em;
         display: flex;
     }
-     
+
     .aside.top {
         width: 100%;
         border-bottom: 1px solid black;
         background-color: white;
         line-height: 1.3;
     }
-     
+
     .column.body {
         width: 65%;
         overflow-wrap: break-word;
@@ -86,7 +86,7 @@
         border: 1px solid black;
         background-color: white;
     }
-     
+
     .column.bottom {
         width: 99%;
         overflow-wrap: break-word;
@@ -96,41 +96,41 @@
         border: 1px solid black;
         background-color: white;
     }
-     
+
     .row:after {
         content: "";
         display: table;
         clear: both;
     }
-     
+
     .zoom {
         font-family: 'Oswald', sans-serif;
         text-decoration: none;
-        -moz-transition:-moz-transform 0.3s ease-in; 
-        -webkit-transition:-webkit-transform 0.3s ease-in; 
+        -moz-transition:-moz-transform 0.3s ease-in;
+        -webkit-transition:-webkit-transform 0.3s ease-in;
         -o-transition:-o-transform 0.3s ease-in;
-        -moz-transition:-moz-transform 0.3s ease-out; 
-        -webkit-transition:-webkit-transform 0.3s ease-out; 
+        -moz-transition:-moz-transform 0.3s ease-out;
+        -webkit-transition:-webkit-transform 0.3s ease-out;
         -o-transition:-o-transform 0.2s ease-out;
      }
-     
+
     .zoom a:hover {
         font-family: 'Oswald', sans-serif;
         color: #000000;
         text-shadow:1px 0px #555;
-        -moz-transform:scale(1.03); 
+        -moz-transform:scale(1.03);
         -webkit-transform:scale(1.03);
         -o-transform:scale(1.03);
      }
-     
+
     p {
         text-indent: 1.5em;
     }
-     
+
     h2 {
         text-align: center;
     }
-     
+
      a {
         text-decoration: none;
         color: black;
@@ -141,17 +141,17 @@
         font-weight: bold;
         display: inline;
     }
-     
+
      img {
         display:block;
         margin-left: auto;
         margin-right: auto;
         max-width: 80%;
-        padding-bottom:20px;  
+        padding-bottom:20px;
      }
-    
+
     footer {
-        text-align: center; 
+        text-align: center;
         font-size: .8em;
         color: black;
         opacity: .9;
@@ -160,58 +160,58 @@
         border: 1px solid black;
         background-color: white;
         }
-     
+
     footer a {
         text-decoration: none;
         color: black;
     }
-     
+
     @media screen and (max-width: 600px) {
         .column.side, .column.middle {
             width: 100%;
         }
     }
-     
+
 </style>
 
 </head>
 
 <body>
-    
+
 <div class="header">
-    
+
   <a href="index.html" class="logo">Quantum Computing</a>
-    
+
   <div class="header-right">
-      
+
     <a href="../home.html">Home</a>
-      
+
     <a href="../qutip/qutip.html">Qutip</a>
-      
+
     <a href="../quantuminfo/qinfo.html">Quantum Info</a>
-      
+
     <a class="active"  href="../quantumalgorithm/qalg.html">Quantum Algorithm</a>
-      
+
     <a href="../contactus/contactus.html">Contact Us</a>
   </div>
-    
-</div> 
-   
+
+</div>
+
 <div class="row">
-    
+
     <div class="column body">
         <h2><a id="shor">Shor’s Algorithm</a></h2>
-<p>Description: If there was a golden child of quantum computing, it would be Shor’s algorithm. Shor’s algorithm is an incredibly important algorithm in quantum computing that has the capability of making a huge impact on current web security. Current computers depend heavily on RSA encryption, which gives each message two keys: the public key which is used to encrypt the messages, and the private key, which is used to decrypt the message. Here is one way how the two keys are generated:</p>
-        
- <ol>     
-     <li>The two keys are generated from the equation n = pq where p and q are two large prime numbers.</li> 
-     
+<p>Description: If there was a golden child of quantum computing, it would be Peter Shor’s algorithm which he published in 1995. Shor’s algorithm is an incredibly important algorithm in quantum computing that has the capability of making a huge impact on current web security. Current computers depend heavily on RSA encryption, which gives each message two keys: the public key which is used to encrypt the messages, and the private key, which is used to decrypt the message. Here is one way how the two keys are generated:</p>
+
+ <ol>
+     <li>The two keys are generated from the equation n = pq where p and q are two large prime numbers.</li>
+
      <li>Find the totient, which is the number of integers that are smaller than n and are also coprime with n: o(n) = (p-1)(q-1). Coprime means that the greatest common denominator between the integers is 1. </li>
-     
+
      <li>The public key is made out of a chosen coprime integer exponent e, that is greater than 1 and less than o(n) and n.  (n, e)</li>
-     
+
      <li>The private key is made out of an integer exponent d= (1+ko(n))/e) where k is an integer, and n.  (n, d)</li>
-</ol> 
+</ol>
 <p>The Encryption function is: c = memodn</p>
 <p>The Decryption function is: m = cdmodn</p>
 
@@ -221,46 +221,46 @@
 
 <ul>
     <li>Classical computing: Reducing the factoring problem to a period finding problem. </li>
-    
+
     <li>Quantum computing: uses the Quantum Fourier Transformation to find the period of a function</li>
 </ul>
-        
+
 <p>Shor’s Steps:</p>
 
 <ol type="1">
     <li>Select a number, m, where m &lt; N, N being the number we are trying to factor. Find the greatest common divisor (gcd) of m and N.  A popular algorithm to use is the Euclidean Algorithm. If the gcd is nontrivial, or not equal to 1, then we are done. If it is trivial, then continue to step 2. </li>
-                                
+
     <li>This step is where quantum computing comes in. The period, r, of a series of values: xmodN, x<sup>2</sup>modN, x<sup>3</sup>modN, x<sup>4</sup>modN … is found using a Quantum Fourier transform and Hadamard gates.  </li>
-    
+
         <ol type="a">
             <li>Apply the hadamard gate to each qubit that is in the input register. This puts each qubit into a superposition.</li>
-            
-            <li>Implement <i>f</i> as a quantum transform. Shor did this by repeated squaring.</li>                               
+
+            <li>Implement <i>f</i> as a quantum transform. Shor did this by repeated squaring.</li>
             <li>Perform a Quantum Fourier Transform. This will output an approximation to r, the period.</li></ol>
-    
+
             <li>If r is odd, return to step 1. If it is even, go to step 4.</li>
-    
+
             <li>Because r is even we can make the equation: (m<sup>r/2</sup>-1)(m<sup>r/2</sup>-1) = mr-1 = 0modN. If m<sup>r/2</sup>+1 = 0modN start over at step 1. Else go to step 5. </li>
-    
+
             <li>Find the gcd of m<sup>r/2</sup>-1 and n using the Euclidean algorithm again. The answer, d, is a factor of N! </li>
         </ol>
 
 <h2><a id="period">Understanding the Importance of Period Finding</a></h2>
-        
+
 <p>We can change the problem of factorization into a problem for period finding because of a few properties that Leonhard Euler discovered. Before we get to that point, let’s look at an integral part of period finding.</p>
 
 <p>Let’s say we have N = pxq, where p and q are two prime numbers. We can select a random number x &lt; N, and using modN, we can create a series of values: xmodN, x<sup>2</sup>modN, x<sup>3</sup>modN, x<sup>4</sup>modN … that continues until we find a period. For example, the powers of 2 are: </p>
-        
+
 	2, 4, 8, 16, 32, 64, 129, 256, 512, 1024, 2048, 4096, 8192, 16384
-        
+
 <p>Let’s say we have N = 15, p = 3, and q = 5. If we make a series of values using x = 2, and mod15, we get: </p>
-        
+
 	2, 4, 8 ,1, 2, 4, 8, 1….
-        
+
 <p>The values start repeating after 4 values, therefore the period r = 4. The period is relatively small, but can increase in length rapidly. For example, let’s say we had N = 35, p = 7 and q=5.  If we make a series of values using x = 2, and mod35, we get:</p>
-    
+
 	2, 4, 8, 16, 32, 29, 23, 11, 22, 9, 18, 1, 2, 4, ….
-        
+
 <p>And the period comes out to be r = 12. You can imagine that as we use increasingly large numbers for N, that the period can increase as well to an unwieldy length for a classical computer. The most important reason for using the period was discovered by Euler. As long as x is not divisible by p or q, meaning x is less than either prime number and is not a multiple of either number, then the period, r evenly divides the value: (p-1)(q-1). We’ll use our earlier values as proof. </p>
 
 <p>If we have p=3 q=5 x=2 and r=4: we know that 2 is not divisible by 3 or 5. So (3-1)(5-1) = 8. 8 is evenly divisible by 4. </p>
@@ -278,79 +278,79 @@ QuTip Walkthrough:
 
 
 <h2><a id="grover">Grover’s Algorithm</a></h2>
-        
-<p>Description: Grover’s algorithm is a probabilistic search algorithm that was developed for searching through an unsorted database. Another explanation for what Grover can do is inverting a function. For example, if we have y=f(x), the Grover algorithm will calculate x when given y.  If there are N entries in the database, Grover’s algorithm has a theoretical efficiency of O(sqrtN) while classical algorithms will have a worst time of O(N). So if we had a list of 1000 items, worst case, a classical algorithm would take 10,000 steps. Grover’s algorithm however, could do it in 100 steps! As you can see, Grover’s would provide quadratic speed up in searching. It’s important to note that because it is probabilistic, meaning its not 100% correct each time, running the algorithm multiple times can increase accuracy.</p> 
+
+<p>Description: Grover’s algorithm is a probabilistic search algorithm that was developed by Lov Grover in 1996, for searching through an unsorted database. Another explanation for what Grover can do is inverting a function. For example, if we have y=f(x), the Grover algorithm will calculate x when given y.  If there are N entries in the database, Grover’s algorithm has a theoretical efficiency of O(sqrtN) while classical algorithms will have a worst time of O(N). So if we had a list of 1000 items, worst case, a classical algorithm would take 10,000 steps. Grover’s algorithm however, could do it in 100 steps! As you can see, Grover’s would provide quadratic speed up in searching. It’s important to note that because it is probabilistic, meaning its not 100% correct each time, running the algorithm multiple times can increase accuracy.</p>
 
 <p>The Grover algorithm takes advantage of a procedure called the amplitude amplification. What this basically means is the amplitude of the marked item, the item we are looking for, is amplified, and the other amplitudes of the other items are repeatedly shrunk. Let’s say we had a two qubit system where the possible value are { 00, 01, 10, 11 }. We can label these respectively states 1,2,3,4. For this example, we’ll say that we’re looking for state 3, and we can label this w- our winner state. The end goal is for w to return 1, and for each other state to return 0. </p>
 <img src="../images/image118.png">
 
-<p>Before we go into the steps, we will have to define two gates: The oracle O(+-f) gate and the Grover Diffusion Operator- represented by the D gate. </p> 
-        
+<p>Before we go into the steps, we will have to define two gates: The oracle O(+-f) gate and the Grover Diffusion Operator- represented by the D gate. </p>
+
         <p>The oracle gate is:</p>
 
-   <img src="../images/image126.png"> 
-    
-<p>Which basically flips the amplitude of the value we are searching for and does nothing to the values we are not searching for. </p> 
+   <img src="../images/image126.png">
 
-<p>The D Gate represents the Grover Diffusion Operator, which inverts the amplitudes around the mean of all of states. To do this it first has to calculate the mean, </p> 
+<p>Which basically flips the amplitude of the value we are searching for and does nothing to the values we are not searching for. </p>
+
+<p>The D Gate represents the Grover Diffusion Operator, which inverts the amplitudes around the mean of all of states. To do this it first has to calculate the mean, </p>
         <img src="../images/image1115.png">
-        
-<p>Then it uses the mean in the following equation:</p> 
+
+<p>Then it uses the mean in the following equation:</p>
 
         <img src="../images/image114.png">
 
-<p>Now that we know what the gates do, we can move on to the steps of the Grover Algorithm: </p> 
-        
-<ol> 
-    
+<p>Now that we know what the gates do, we can move on to the steps of the Grover Algorithm: </p>
+
+<ol>
+
 <li>Set all qubits initially to 0. </li>
-    
+
 <li>Apply the hadamard gate to each qubit. This puts the qubits in superposition and gives them each a Uniform Superposition and amplitude. In the case of four possible states, this gives each an amplitude of ½. Now remember that the point of Grover’s is to increase the probability that the correct value is found. The probability of each state being found is to square it’s amplitude. At this point in the algorithm, each state has a probability of (½)2 or ¼ or 25% of being observed.</li>
-    
+
     <img src="../images/image123.png">
-    
+
 <li>Apply the O(+-f) gate. This gate basically flips the value we’re looking for over the axis. This has not changed the probability of any state being observed. The amplitudes ½ and -½ both create a probability of 25%.</li>
-    
+
     <img src="../images/image124.png">
-    
+
 <li>Apply the D Gate, the gate that uses the Grover Diffusion operator. This gate basically flips each value over the mean. This gate is where the magic really happens, as you can tell from below. The mean was ¼. If you flip -½ over ¼ you get a value of 1. If you invert 1/2 over 1/4, you get 0. The probability of observing state 3 is now 100%. Now this was especially easy as we had 4 possible states, but as the number of possible states increase, you will have to repeat step 2 and 3 a few times.  </li>
 
     <img src="../images/image1118.png">
-    
-</ol>    
+
+</ol>
 
 <p><b>Gates</b>: Hadamard O(+-f) oracle gate, D gate (Grover diffusion operator), measurement
 This is for 2 qubits: {0,1} and their various combined states. You can add more qubits, and they’d still go through each gate listed below. </p>
 
         <img src="../images/image1116.png">
-        
+
 <h4>QuTip Walkthrough:</h4>
 
 <h2><a id="deutsch">Deutsch's algorithm</a></h2>
-<p>Description: 
-Deutsch’s algorithm is a probabilistic algorithm, meaning that it is not always successful, and in particular this algorithm is right half of the time. It was created in order to show how quantum computers can be used, but it doesn’t solve an important programming issue. It is however useful in illustrating how to manipulate qubits and how they work. The Deutsch algorithm tests whether a function f is constant OR balanced. 
+<p>Description:
+David Deutsch created the Deutsch’s algorithm in 1985. It is a probabilistic algorithm, meaning that it is not always successful, and in particular this algorithm is right half of the time. It was created in order to show how quantum computers can be used, but it doesn’t solve an important programming issue. It is however useful in illustrating how to manipulate qubits and how they work. The Deutsch algorithm tests whether a function f is constant OR balanced.
 This means that EITHER:</p>
 
 <ol>
  <li>All configurations or groupings of bits map to the same value. </li>
  <li> The configurations map to different values</li>
 </ol>
-        
+
  <p>So we can have f(0) or f(1) map to 0 or 1.  The algorithm tests the function f to see whether the function is one to one (balanced), meaning that each x value has exactly one y value, and each y value has exactly one x value, or if it is not one to one and is therefore constant. Remember that quantum algorithms use unitary transformations, which are reversible. So we have to receive a value that we can put back in the transformation and get the original values. This is illustrated below.</p>
-        
+
 <img src="../images/image91.png"
-        
+
 <p>Once the transformations have been made, the answer is derived from the first qubit. If the qubit is equal to 1, the function f is balanced. If the first qubit is equal to 0, the function f is constant.</p>
 
 <p><b>Gates</b>: Hadamard Gate is always used. CNOT or NOT Gate is used. Measurement Gate. Quantum Oracle U</p>
 
 
 <h4>QuTip Walkthrough: </h4>
-        
- <ol> 
-     
+
+ <ol>
+
 <li>When implementing Deutsch’s algorithm, we make sure we are importing qutip and scipy to able to call the proper functions: </li>
-    
+
 <li>After import, we need to create an input string to set the values for the function that will run be evaluated by the algorithm. The possible function values are {0,0}, {0,1}, {1,0}, and {1,1}</li>
 
 <li> The next step will be to create the qubits for the algorithm. We will be using the basis() to determine the vector representation of Fock states. The first integer determines the number of states where the 2nd integer is the value of the qubit: </li>
@@ -365,25 +365,25 @@ This means that EITHER:</p>
 
 <li> We then combine the states of the qubits and find the result from the states. Tensor takes the value of state vectors or operators and returns a composite quantum object for the combined Hilbert space. (For a refresher, a Hilbert Space is an abstract vector space possessing the structure of an inner product that allows length and angle to be measured.) </li>
 
-<li> Finally we will print the results of the algorithm:</li> 
+<li> Finally we will print the results of the algorithm:</li>
 
 <p>Ensure that the script file is within your qutip environment before you run this file within your console!</p>
-    
-</ol> 
-        
+
+</ol>
+
 <h4>Example Output with a function {0, 1}:</h4>
 
 
 <h2><a id="jozsa">Deutsch-Jozsa algorithm</a></h2>
-        
-<p>Description: The Deutsch-Jozsa algorithm is a deterministic algorithm, meaning that if you put a specific input into this algorithm, you are guaranteed the same output each time. It has the same purpose as the Deutsch algorithm, however this algorithm is for functions with many bits, not just 2. The Deutsch-Jozsa algorithm tests whether a function f is constant OR balanced. This algorithm is a better example of how quantum computing algorithms can solve issues faster than classical computer, because by using this algorithm it only takes one evaluation of U, while a classical algorithm would have to evaluate the function f at least 2n-1+1 times to solve. This is a dramatic improvement.
+
+<p><b>Description</b>: The Deutsch-Jozsa algorithm was proposed in 1992 by Richard Jozsa and David Deutsch, and it later had improvements by Michele Mosca, Artur Ekert, Chiara Macchiavello, and Richard Cleve. It is a deterministic algorithm, meaning that if you put a specific input into this algorithm, you are guaranteed the same output each time. It has the same purpose as the Deutsch algorithm, however this algorithm is for functions with many bits, not just 2. The Deutsch-Jozsa algorithm tests whether a function f is constant OR balanced. This algorithm is a better example of how quantum computing algorithms can solve issues faster than classical computer, because by using this algorithm it only takes one evaluation of U, while a classical algorithm would have to evaluate the function f at least 2n-1+1 times to solve. This is a dramatic improvement.
 This means that EITHER:</p>
 
 <ol>
  <li> All configurations or groupings of bits map to the same value. </li>
  <li>  The configurations map to different values</li>
 </ol>
-        
+
  <p>So we can have f(0) or f(1) map to 0 or 1.  The algorithm tests the function f to see whether the function is one to one (balanced), meaning that each x value has exactly one y value, and each y value has exactly one x value, or if it is not one to one and is therefore constant. </p>
 
 <p>The quantum oracle U is demonstrated below:</p>
@@ -395,18 +395,66 @@ This means that EITHER:</p>
 <h4>QuTip Walkthrough:</h4>
 
         <ol>
-The first step we need to undertake (as always) is making sure we import the proper libraries. We can also go ahead and create the input string required for this algorithm. In the Deutsch-Jozsa algorithm, we can have an input of n^2 values. In this example, I have multiple inputs (only one is active at a time) to test different cases: 
-After the input(s) have been created, we need to take the log of the length of the input. This is to get the required qubits needed for this algorithm. Following this, we want to create an array of qubits based on the amount of required qubits: 
+The first step we need to undertake (as always) is making sure we import the proper libraries. We can also go ahead and create the input string required for this algorithm. In the Deutsch-Jozsa algorithm, we can have an input of n^2 values. In this example, I have multiple inputs (only one is active at a time) to test different cases:
+After the input(s) have been created, we need to take the log of the length of the input. This is to get the required qubits needed for this algorithm. Following this, we want to create an array of qubits based on the amount of required qubits:
 Once the qubit array has been filled, we will want to loop through the array, place the qubits within a tensor, followed by creating hadamard gate for passing the qubits through:
-We then want to create a zero matrix circuit based on the input length to pass the qubits through: 
+We then want to create a zero matrix circuit based on the input length to pass the qubits through:
 Finally, we will run the quantum circuit and print out the results. Similar to the Deutsch algorithm, we are looking at the values of the qubits to determine if they are balanced or constant. If the value of the 1st or 2nd Qubit is greater than 0.5, then the function will be constant. Otherwise, we determine the function is balanced. :
 </ol>
-        
-<h4>Example Output with an input of (00111010):</h4>      
-      
+
+<h4>Example Output with an input of (00111010):</h4>
+
+
+<h2>Simon's Algorithm</h2>
+
+<p><b>Explanation: </b>Simon’s algorithm was created by Daniel Simon in 1994, and was actually the inspiration for the Shor’s Algorithm. It is one of many quantum algorithms that showcase a quantum speedup when pitted against a classical algorithm.
+The function that the algorithm tests is either a one to one or two to one function f : {0,1}n -> {0,1}n and it is promised to obey the property: </p>
+
+<p>This means that if x and y are two inputs, and their outputs yield the same value, then x bitwise XOR y = s. The promise is that there is some value S that allows this property to exist, and the task of Simon’s Algorithm is to find it. </p>
+
+<p>For example, let’s say n = 3. That means our possible input values of {0,1}<sup>n</sup> are: </p>
+
+<p>Now let’s use a function that we can prove follows the property listed in the beginning: </p>
+
+<p>In this function, n = 3 and s = 110. </p>
+
+<p>As you can see on the right side of the diagram above, each input value shares an output value with one other input value.  </p>
+
+<p><i>f(010) = f(110) = 000       f(001) = f(111) = 010      f(000) = f(110) = 101       f(011) = f(101) = 110</i></p>
+
+<p>If we took the bitwise XOR of each coupled input value, we would get 110. </p>
+
+<p><i>010 XOR 110 = 110	001 XOR 111 = 110	000 XOR 110 = 110	011 XOR 101 = 110</i></p>
+
+<p>Like many quantum algorithms, Simon’s algorithm has a classical and a quantum part. However it is still more efficient than purely classical algorithms as Simon’s can be solved in polynomial time, and the most efficient classical algorithm is solved in exponential time. </p>
+
+<p>In the beginning of the quantum circuit, we use 2n qubits, all initialized to 0. The first n qubits are transformed by a hadamard gate. Then both the first n and second n qubits pass through the Bf gate. This gives us the state: </p>
+
+<p>Then the first set of qubits are transformed again by the hadamard gate. Which gives us the state: </p>
+
+<p>Ant then a measurement is taken, and there are two possible cases: </p>
+<ul>
+    <li>x bitwise XOR y = 0<sup>n</sup> which means that f is a one to one function</li>
+    <li>x bitwise XOR y = s  where s is not equal to 0<sup>n</sup> which means that <i>f</i> is a two to one function</li>
+</ul>
+
+<p>Because our example was a two to one function, we’ll focus on this case. Let A = range(f) and z is an element in A, aka z is in the output of f. This probability p of measuring a string y in the range of function f can be rewritten as: </p>
+
+<ul>
+  <li>If ys is odd then the probability is 0 </li>
+  <li>If ys is even then the probability is 2<sup>-(n-1)</sup></li>
+</ul>
+
+<p>We can now move onto the classical portion of the algorithm:
+The quantum portion of the algorithm is repeated several times to get a set of strings y. The probability of this set being linearly independent is roughly 28%. If the set is linearly independent then you can solve the system to get an s value. You can repeat the entire process 4m times, in which case even with a small value for m, you’ll have an extremely high probability of getting a linearly independent set. </p>
+
+<p>Gates Used:  Hadamard, Measurement, Blackbox function B</p>
+
+
+
     </div>
     <div class="column side">
-        <div class="aside top">        
+        <div class="aside top">
             <h2>Jump To . . . </h2>
             <div class="zoom"><a href="qalg.html#shor">Shor's Algorithm</a></div>
             <div class="zoom"><a href="qalg.html#period">Understanding the Importance of Period Finding</a></div>
@@ -419,7 +467,7 @@ Finally, we will run the quantum circuit and print out the results. Similar to t
     </div>
 
 <footer>
-    Last Updated: October 15, 2018 | 
+    Last Updated: October 15, 2018 |
     <a href="../home.html">Home</a> |
     <a href="about.html">About</a> |
     <a href="../quantuminfo/qinfo.html">Quantum Info</a> |
@@ -427,7 +475,7 @@ Finally, we will run the quantum circuit and print out the results. Similar to t
     <a href="../contactus/contactus.html">Contact Us</a> |
     KSU IT4203 &copy; 2018
 </footer>
-    
+
 </body>
 
 </html>
