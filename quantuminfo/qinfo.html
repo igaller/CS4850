@@ -1,23 +1,23 @@
 <!DOCTYPE HTML>
 
 <html>
-    
+
 <head>
-    
+
 <title>Quantum Computing</title>
-    
+
  <style>
-     
+
     * {
         box-sizing: border-box;
     }
-     
+
     body {
         margin: 0;
         padding: 0 .3em .3em .3em;
         background-image: url(../images/exb1.jpg);
     }
-     
+
     .header {
         overflow: hidden;
         padding: 10px 10px;
@@ -26,36 +26,36 @@
         color: black;
         border: 1px solid black;
         }
-     
+
     .header a {
         float: left;
         text-align: center;
         padding: 12px;
         text-decoration: none;
-        font-size: 20px; 
+        font-size: 20px;
         line-height: 20px;
         border-radius: 4px;
         color: white;
         }
-        
+
     .header a.logo {
         font-size: 45px;
         font-weight: bold;
     }
-     
+
     .header a.active {
         background-color: #000;
         }
-     
+
     .header-right {
         float: right;
         }
-     
+
     .column {
         float: left;
         padding: 10px;
     }
-     
+
     .column.side {
         width: 33%;
         border: 1px solid black;
@@ -63,20 +63,20 @@
         overflow-wrap: break-word;
         word-break: break-word;
         background-color: white;
-        
+
         position: fixed;
         right: 1.5px;
         font-size: .9em;
         display: flex;
     }
-     
+
     .aside.top {
         width: 100%;
         border-bottom: 1px solid black;
         background-color: white;
         line-height: 1.3;
     }
-     
+
     .column.body {
         width: 65%;
         overflow-wrap: break-word;
@@ -85,7 +85,7 @@
         border: 1px solid black;
         background-color: white;
     }
-     
+
     .column.bottom {
         width: 99%;
         overflow-wrap: break-word;
@@ -95,41 +95,41 @@
         border: 1px solid black;
         background-color: white;
     }
-     
+
     .row:after {
         content: "";
         display: table;
         clear: both;
     }
-     
+
     .zoom {
         font-family: 'Oswald', sans-serif;
         text-decoration: none;
-        -moz-transition:-moz-transform 0.3s ease-in; 
-        -webkit-transition:-webkit-transform 0.3s ease-in; 
+        -moz-transition:-moz-transform 0.3s ease-in;
+        -webkit-transition:-webkit-transform 0.3s ease-in;
         -o-transition:-o-transform 0.3s ease-in;
-        -moz-transition:-moz-transform 0.3s ease-out; 
-        -webkit-transition:-webkit-transform 0.3s ease-out; 
+        -moz-transition:-moz-transform 0.3s ease-out;
+        -webkit-transition:-webkit-transform 0.3s ease-out;
         -o-transition:-o-transform 0.2s ease-out;
      }
-     
+
     .zoom a:hover {
         font-family: 'Oswald', sans-serif;
         color: #000000;
         text-shadow:1px 0px #555;
-        -moz-transform:scale(1.03); 
+        -moz-transform:scale(1.03);
         -webkit-transform:scale(1.03);
         -o-transform:scale(1.03);
      }
-     
+
     p {
         text-indent: 1.5em;
     }
-     
+
     h2 {
         text-align: center;
     }
-     
+
      a {
         text-decoration: none;
         color: black;
@@ -140,9 +140,17 @@
         font-weight: bold;
         display: inline;
     }
-    
+
+    img {
+       display:block;
+       margin-left: auto;
+       margin-right: auto;
+       max-width: 80%;
+       padding-bottom:20px;
+    }
+
     footer {
-        text-align: center; 
+        text-align: center;
         font-size: .8em;
         color: black;
         opacity: .9;
@@ -151,62 +159,57 @@
         border: 1px solid black;
         background-color: white;
         }
-     
+
     footer a {
         text-decoration: none;
         color: black;
     }
-     
+
     @media screen and (max-width: 600px) {
         .column.side, .column.middle {
             width: 100%;
         }
     }
-     
+
 </style>
 
 </head>
 
 <body>
-    
+
 <div class="header">
-    
+
   <a href="index.html" class="logo">Quantum Computing</a>
     <a id="quantumcomputing"></a>
   <div class="header-right">
-      
+
     <a href="../home.html">Home</a>
-      
+
     <a href="../qutip/qutip.html">Qutip</a>
-      
+
     <a class="active" href="../quantuminfo/qinfo.html">Quantum Info</a>
-      
+
     <a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a>
-      
+
     <a href="../contactus/contactus.html">Contact Us</a>
   </div>
-    
-</div> 
-   
+
+</div>
+
 <div class="row">
-    
+
     <div class="column body">
             <h2><a id="linearalg">Introduction to Linear Algebra</a></h2>
     <p>
-    Linear Algebra is a math based on the manipulation of linear equations through matrices and vectors. An important note to keep in mind is that linear algebra only deals with linear equations, which when plotted on a graph are straight lines. These types of equations can be represented by vectors. 
+    Linear Algebra is a math based on the manipulation of linear equations through matrices and vectors. An important note to keep in mind is that linear algebra only deals with linear equations, which when plotted on a graph are straight lines. These types of equations can be represented by vectors.
     </p>
-        
+
     <p>
-    If you've studied physics, you may remember vectors as a force with a direction and magnitude. Vectors have many visual representations and can be shown as a ordered pair, in matrix form, a system of equations, or as a line on a graph. 
+    If you've studied physics, you may remember vectors as a force with a direction and magnitude. Vectors have many visual representations and can be shown as a ordered pair, in matrix form, a system of equations, or as a line on a graph.
     </p>
     <br>
-    <img src="../images/image24.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
-    In this guide we will learn: 
+    <img src="../images/image24.png">
+    In this guide we will learn:
     <br>
     <div style="margin-left: 40px">
     1. Magnitude and Unit Vectors <br>
@@ -223,89 +226,54 @@
     12. Determinants <br>
     13. Bases and Orthogonal Bases <br>
     </div>
-    
+
 
         <h2><a id="magandunitv">Magnitude and Unit Vectors</a></h2>
-    <p>    
-    Vectors have magnitudes which are similar to the lengths of lines, and can be calculated similarly as well. The notation for the magnitude of a vector is: ||a||. Let's see how we can calculate it: 
-    <img src="../images/image20.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <p>
+    Vectors have magnitudes which are similar to the lengths of lines, and can be calculated similarly as well. The notation for the magnitude of a vector is: ||a||. Let's see how we can calculate it:
+    <img src="../images/image20.png">
     </p>
     <p>
     If we take the magnitude of a vector and its direction, we can also create another important value - the vector's unit vector. A unit vector has a length of 1 unit, and it shows the direction of the vector regardless of magnitude or length of the original vector. The formula for a unit vector is shown below. It's notation is the same letter as the vector, however it has a carrot on top:
-    <img src="../images/image25.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image25.png">
 	</p>
         <h2><a id="dimensions">Brief Discussion on Dimensions</a></h2>
     <p>
-    You probably noticed in the introduction that the vectors had 2 numbers. This vector has 2 dimensions which can be represented by R<sup>2</sup>. The R represents real numbers, and the superscript number represents the number of dimensions. 
-    In this text we will use R to represent real numbers, but it is usually represented by: 
+    You probably noticed in the introduction that the vectors had 2 numbers. This vector has 2 dimensions which can be represented by R<sup>2</sup>. The R represents real numbers, and the superscript number represents the number of dimensions.
+    In this text we will use R to represent real numbers, but it is usually represented by:
     <img src="../images/image8.png">.
-    The superscript number can be any positive number, and we can represent it generally as R<sup>n</sup>. For the majority of this index we will deal with real numbers, and then later switch to complex numbers. If we are working with vectors with complex numbers the R<sup>n</sup> changes to C<sup>n</sup>. 
+    The superscript number can be any positive number, and we can represent it generally as R<sup>n</sup>. For the majority of this index we will deal with real numbers, and then later switch to complex numbers. If we are working with vectors with complex numbers the R<sup>n</sup> changes to C<sup>n</sup>.
 	</p>
         <h2><a id="addition">Basic Vector Maths</a></h2>
     <h2>Addition</h2>
     <p>
-    If you're trying to add two vectors together, you add the corresponding components. The two vectors below can also be represented as: (1x+3y) and (5x+7y). The x components correspond with each other, and the y components correspond with each other. Notice in the example below that the size of the final matrix is the same size as the two matrices being added. 
+    If you're trying to add two vectors together, you add the corresponding components. The two vectors below can also be represented as: (1x+3y) and (5x+7y). The x components correspond with each other, and the y components correspond with each other. Notice in the example below that the size of the final matrix is the same size as the two matrices being added.
     In order to add matrices, the matrices have to have the same number of rows and columns:
-    <img src="../images/image21.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image21.png">
     </p>
     <p>
     When the matrix becomes larger, it can initially look more difficult, but the same rules above apply. Take into consideration the numbers position in the matrix. For example "1" in the first matrix is in the first row and the first column. "5" in the second matrix is in the first row and the first column. Because these two numbers are share positions in the matrix, we add them:
 	</p>
-    <img src="../images/image46.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image46.png">
 
 
         <h2><a id="subtraction">Subtraction</a></h2>
     <p>
-    Matrix subtraction is very similar to matrix addition. The only change is that instead of adding the corresponding numbers, you subtract them. The two vectors below can be represented as: (1x+3y) and (5x-5y). To subtract the two vectors, you would subtract the x components and subtract the y components. Notice in the example below that the size of the final matrix is the same size as the two matrices being subtracted. 
+    Matrix subtraction is very similar to matrix addition. The only change is that instead of adding the corresponding numbers, you subtract them. The two vectors below can be represented as: (1x+3y) and (5x-5y). To subtract the two vectors, you would subtract the x components and subtract the y components. Notice in the example below that the size of the final matrix is the same size as the two matrices being subtracted.
     In order to subtract matrices, the matrices have to have the same number of rows and columns:
 	</p>
-    <img src="../images/image43.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image43.png">
 
     <p>
     Similar to larger matrix addition, large matrix subtraction just requires subtracting the corresponding components from each other.  For example "5" in the first matrix is in the first row and the first column. "1" in the second matrix is in the first row and the first column. Because these two numbers are share positions in the matrix, we subtract them:
 	</p>
-    <img src="../images/image17.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;"> 
+    <img src="../images/image17.png">
 
         <h2><a id="scalarmulti">Scalar Multiplication</a></h2>
     <p>
     As discussed in the beginning, a scalar has no direction and cannot be represented in a matrix. You can however multiply a vector or a matrix by a scalar. Simply multiply each number in the matrix by the scalar. The resulting matrix will have the same number of rows and columns as the original matrix:
 	</p>
-    <img src="../images/image31.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image31.png">
 
 
         <h2><a id="vectortimes">Vector Multiplication</a></h2>
@@ -314,77 +282,37 @@
     <p style="margin-left: 40px"> 1. You can only multiply matrices if matrix A has the same number of columns as the number of rows in matrix B. So if matrix A is a 2x3 matrix, and matrix B is a 3x4 matrix, you can complete the equation AxB. <br></p>
     <p style="margin-left: 40px"> 2. The result of the matrix changes if you change from AxB to BxA, and you may not be able to multiply BxA if it does not fulfill rule 1. <br></p>
     <p style="margin-left: 40px"> 3. To multiply two matrices, follow the row column multiplication. For example, let's say you have the equation AxB=C, you take the numbers in the first row of matrix A and multiply them against the numbers in the first column of matrix B and add the products. Your result will be the number in the first row and first column in matrix C. <br></p>
-    <p style="margin-left: 40px"> 4. If you can multiply AxB, the resulting matrix will have the same number of rows as matrix A, and the same number of columns in matrix B. 
+    <p style="margin-left: 40px"> 4. If you can multiply AxB, the resulting matrix will have the same number of rows as matrix A, and the same number of columns in matrix B.
     <br></p>
     <p>These concepts are illustrated below:
 	</p>
 	<p>
     Rule Number 1 & 2: As you can see in the examples below, you can only multiply matrices if they number of columns in matrix A equals the number or rows in matrix B:
-    <img src="../images/image32.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
-    <img src="../images/image29.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
-    <img src="../images/image39.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image32.png">
+    <img src="../images/image29.png">
+    <img src="../images/image39.png">
     </p>
     <p>
     Rule Number 3 & 4: If you look at the two examples below, you'll see that the matrix below is divided by rows, and the second matrix is divided by columns. This is a visual to aid you with row column multiplication. We can see that we multiply the first row of matrix A by the first column of matrix B. The first variable in row one is multiplied by the first variable in column one. The second variable in row one is multiplied by the second variable in column one. This trend continues and then you sum the products:
 	</p>
-    <img src="../images/image5.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image5.png">
     <p>
-    If you analyze the diagram below, you can see that the values of the first row in matrix A, will be found in the first row of matrix C. You will also see that the values in the first column of matrix B will be found in the first column in matrix C. 
-    <img src="../images/image36.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    If you analyze the diagram below, you can see that the values of the first row in matrix A, will be found in the first row of matrix C. You will also see that the values in the first column of matrix B will be found in the first column in matrix C.
+    <img src="../images/image36.png">
     </p>
         <h2><a id="innerdot">Inner Dot Product</a></h2>
     <p>
     The inner dot product is an important concept that can provide a way to tell you a lot of information about two vectors, including the angle between the two vectors. It can also show you the effect the two vectors will have on each other- will they cancel out to 0, will there be positive growth, or will there be a reversal.
 	</p>
 	<p>
-    Getting the dot product is similar to matrix multiplication that we learned earlier, but it deals with 2x1 and 1x2 vectors: 
-    <img src="../images/image11.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    Getting the dot product is similar to matrix multiplication that we learned earlier, but it deals with 2x1 and 1x2 vectors:
+    <img src="../images/image11.png">
 	</p>
 	<p>
-    There's a special name for two vectors that when multiplied have an inner product of 0. Those vectors perpendicular to each other and are known as orthogonal vectors. You can have a set of orthogonal vectors, if each vector is mutually perpendicular to each other. For example: 
+    There's a special name for two vectors that when multiplied have an inner product of 0. Those vectors perpendicular to each other and are known as orthogonal vectors. You can have a set of orthogonal vectors, if each vector is mutually perpendicular to each other. For example:
 	</p>
-    <img src="../images/image12.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
-    <img src="../images/image16.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image12.png">
+    <img src="../images/image16.png">
     <p>
     We can convert mutually orthogonal vectors into a set of Orthonormal vectors, meaning that not only are the vectors mutually orthogonal, each vector also has a unit length of 1.
 	</p>
@@ -392,28 +320,13 @@
     	<h2><a id="bringingequationstogether">Bringing Equations Together: System of Linear Equations</a></h2>
    	<p>
     In previous sections we have looked at vectors as being separate from each other- we added them, subtracted, multiplied, etc. However systems of linear equations are quite common, and you might remember them from algebra. </p>
-    <img src="../images/image45.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image45.png">
     <p>
     You may have used a method like substitution to solve this system of equations, however in linear algebra, we can find out if there is a solution and what it is by using matrices. The matrix representation of this system looks like: </p>
-    <img src="../images/image30.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image30.png">
     <p>
     You can infer from the colors that each line in the matrix represents one of the equations. We can use this matrix form to create an augmented matrix, which we will use to solve the system! An augmented matrix holds both the coefficients, and what each equation equals. </p>
-    <img src="../images/image38.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image38.png">
     <p>
     Each row represents the coefficients of an equation. Each column represents the coefficients for each variable. Now that we have the equations in an augmented matrix, the next question you may be asking is - how do we find the solution? To do this we will have to transform the matrix into its Row Echelon Form. </p>
 
@@ -421,12 +334,7 @@
     <p>
     When working with a system of equations, it's easier to find the solution if you're working with reduced equations. For example instead of using 4x + 16y = 0, you can use x + 4y = 0.  Augmented matrices work the same, and have a form called Row Echelon Form. Here is a matrix in row echelon form:
 	</p>
-    <img src="../images/image42.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image42.png">
 
     Here are the characteristics of the Row Echelon Form: <br>
     <div style="margin-left: 40px">
@@ -437,10 +345,10 @@
 
     <p>
     Why is this form helpful?
-    Remember from earlier, that each column represents the coefficients for a variable, like x or y or z. If we cancel out the values of variables in each column, it will make it easier to find the solution to the matrix. 
+    Remember from earlier, that each column represents the coefficients for a variable, like x or y or z. If we cancel out the values of variables in each column, it will make it easier to find the solution to the matrix.
 	</p>
 	<p>
-    Now that we know both the row echelon form rules and why it is useful, we can learn how to transform an augmented matrix into the row echelon form. 
+    Now that we know both the row echelon form rules and why it is useful, we can learn how to transform an augmented matrix into the row echelon form.
 	</p>
 	<p>
     Row operations are relatively simple to grasp, and allow you to manipulate and simplify the system of equations. You can do the following:</p>
@@ -451,19 +359,9 @@
     </div>
     <p>
     Here is an example. The rows are represented in both color, and by R1, R2, R3, R4: Notice how each operation is illustrated with an arrow, and a bit of text saying what operations are being done. This step can sometimes be skipped and replaced with a ~. </p>
-    <img src="../images/image23.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
-    The new system of equations is: 
-    <img src="../images/image37.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image23.png">
+    The new system of equations is:
+    <img src="../images/image37.png">
     <p>
     As you can tell, it would be quite easier to find the solution to this system. But we can actually make this even more simpler. We can use the Reduced Echelon Form. </p>
 
@@ -479,20 +377,10 @@
 	</div>
   	<p>
     The augmented matrix we ended up with in the above example was in row echelon form, however if we do the row operation R1 - 2R2, and R1 - 3R2, we can get the matrix into Reduced Echelon Form. </p>
-    <img src="../images/image19.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image19.png">
     <p>
     You can already see the perks of reduced echelon form! It saves the need for additional algebraic work. The transformed system of equations is: </p>
-    <img src="../images/image41.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image41.png">
     <p>
     When we get a matrix into row echelon or reduced echelon form, we can actually see how many solutions the matrix is going to have. Matrices can have: 0, 1, or infinite solutions. </p>
     <p>
@@ -507,30 +395,15 @@
     Linear combination and span may seem like foreign words to you right now, but they have simple and easy to understand meanings, and you've already had experience with one of them!</p>
     <p>
     A linear combination of vectors is just a summation of the vectors together. You can multiply each vector by a scalar before adding, or even subtract the vectors, and you'll get a linear combination. For example:</p>
-    <img src="../images/image28.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image28.png">
     <p>
     Depending on the vectors, you may notice that there's a large number of possible linear combinations for the vectors. If you were to find all the linear combinations, you'd get a span. An example notation for span is:</p>
-    <img src="../images/image40.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
-    <p>           
+    <img src="../images/image40.png">
+    <p>
     Where v<sub>1</sub>,  v<sub>2</sub>, and  v<sub>3</sub>, are vectors. </p>
     <p>
     For example: </p>
-    <img src="../images/image26.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image26.png">
     <p>
     Where the c's are any scalar value. </p>
     <p>
@@ -538,145 +411,75 @@
     <p>
     Let's say we have the vector u = (4 , 38) and we want to know if it is a linear combination of the two vectors above. Here's how we would solve it:
 	</p>
-	<img src="../images/image14.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+	<img src="../images/image14.png">
 
     <h2><a id="lineardependence">Linear Dependence</a></h2>
     <p>
     Our next topic is linear dependence, and how to use matrices to learn if a group of vectors are linearly independent. A group of vectors are linearly independent from each other if the only solution to the vectors is a vector of all 0s. If there exists a solution of not all zeroes, the vectors are linearly dependent. </p>
     <p>
     Let's say that we have three vectors s, t, and u. We can combine them into one augmented matrix.</p>
-    <img src="../images/image13.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image13.png">
     <p>
     We can then learn if these vectors are linearly independent or dependent by putting the matrix into row echelon form.</p>
-    <img src="../images/image34.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image34.png">
     <p>
     As we can see, there is a leading coefficient in each column, so there are no free variables. This matrix only has one solution - a vector of all zeroes, and so the set of vectors are linearly independent. If there was a free variable, the set of vectors would be linearly dependent.</p>
 
     <h2><a id="matrixinverse">Matrix Inverse</a></h2>
     <p>
     Just like many values have an inverse, for example the inverse of 5 is ⅕, matrices also have inverses. When you multiply a matrix by its inverse, you get an identity matrix. An identity matrix is a matrix with 1's on the main diagonal, and every other number is a zero. For example the following are identity matrices. </p>
-    <img src="../images/image9.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image9.png">
     <p>
     The notation for the inverse of Matrix A is A<sup>-1</sup>. </p>
-    <p> 
+    <p>
     A matrix that is not invertible is known as a singular matrix.</p>
     <p>
     There are a few methods for discerning whether or not a matrix is invertible:
-    1. The matrix is a square matrix. It is nxn. 
-    2. The determinant is nonzero. 
+    1. The matrix is a square matrix. It is nxn.
+    2. The determinant is nonzero.
     3. There is a pivot position in each column, meaning the columns of the matrix are linearly independent.
 	4. Matrix A is row equivalent and column equivalent to its identity matrix. This means that Matrix A can be transformed into its identity matrix with simple row operations.
-	
+
 	</p>
 	<p>
     Now that we know the rules for quickly guessing if a matrix has an inverse, we can look at the methods for finding the inverse of the matrix. The basic premise is setting up the matrix [ A I ], I being the identity matrix, and performing row operations until we get the side where A is to be equivalent to the identity matrix. The new values on the right side of the matrix, where I used to be will be the values of A<sup>-1</sup>. </p>
     <p>
     Let's try this out with an example. </p>
-    <img src="../images/image10.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image10.png">
     <p>
     We can merge these matrices together and form the matrix [ A I ] and then use row operations to find the inverse. </p>
-    <img src="../images/image7.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
-    <img src="../images/image3.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image7.png">
+    <img src="../images/image3.png">
 
 
-    Our A<sup>-1</sup> is: 
-    <img src="../images/image35.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    Our A<sup>-1</sup> is:
+    <img src="../images/image35.png">
 
     <h2><a id="determinants">Determinants</a></h2>
     <p>
     Now you may have encountered a new phrase, determinant, in the rule set for determining if a nxn matrix has an inverse. A determinant is computed from the values of a square matrix and is represented as: det(A).  When calculating the determinant of a matrix, you also want to change the [ ] brackets to straight lines like | |. The notation is shown below.</p>
-    <img src="../images/image6.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image6.png">
     <p>
     We'll start with finding the determinant for a 2x2 matrix. The formula for the determinant for a 2x2 matrix is: </p>
-    <img src="../images/image4.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image4.png">
     <p>
     For example: </p>
-    <img src="../images/image44.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image44.png">
     <p>
     The formula for finding the determinant for a 3x3 matrix is: </p>
-    <img src="../images/image2.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image2.png">
     <p>
     The basic concept of it is take a row or column, take each element, and multiply it against the determinant of a matrix made from the elements that are in different rows and columns. So we take a and multiply it by the determinant of the matrix e,f,h,i because those values are not in a's row or column. Now you may have noticed that b has a minus sign in front of it. This is because or b's placement in the original matrix. Here's a visual of which elements will have a negative or positive sign.</p>
-    <img src="../images/image30.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image30.png">
     <p>
-    As you can see it follows a + - + - pattern in each row and column. 
+    As you can see it follows a + - + - pattern in each row and column.
     The formulas for larger matrices are similar to the formula for a 3x3 matrix, but there's more break down, and it can take a long time. It is faster to learn how to plug matrices into a graphing calculator. </p>
 
 
     <h2><a id="subspaces">Subspaces</a></h2>
     <p>
     Before we get into subspaces, let's go over some quick notations. Let's look at:</p>
-    <img src="../images/image22.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image22.png">
     <p>
     There are two parts to this notation, and they are divided by the straight line in the middle. The first part shows you the possible values of the vectors, such as the first value being x+1 and the second value being x-3. The "c" with a line through it stands for "is a set of", and tells us that all the possible vectors will be two dimensional and have real numbers. To the right of the line is a constraint. Here the constraint is very broad, x just has to be a real number. We can take the possible values of x, and its constraint, and learn whether or not this set of vectors is a subspace. </p>
     <p>
@@ -688,25 +491,15 @@
 	</div>
     <p>
     Let's take a look at the figure above and see if it fits the rules of a subspace: </p>
-    <img src="../images/image22.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image22.png">
     <div style="margin-left: 40px">
     Lets try rule 1: containing the 0 vector. We can immediately say that this set of vectors is not a subspace because there exists no number that x+1 = 0  and x-3 = 0. </div>
     <p>
     Let's try another example: </p>
-    <img src="../images/image18.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image18.png">
     <p>
-    Here we know that the vectors will be 2 dimensional and only contain real numbers. We also have the constraint that x<sub>1</sub> has to be greater than or equal to 0. The value x<sub>2</sub> has no constraints on it and can be negative or positive. 
-    
+    Here we know that the vectors will be 2 dimensional and only contain real numbers. We also have the constraint that x<sub>1</sub> has to be greater than or equal to 0. The value x<sub>2</sub> has no constraints on it and can be negative or positive.
+
     Let's try rule 1, the inclusion of the zero vector: It passes because according to the constraints, both values can be equal to 0. <br>
 
     Let's try rule 3, closed under vector addition: The constraint tells us that all values of x1 will be greater than 0, and a positive number plus a positive number is a positive. So we know that this set of vectors is closed under addition. <br>
@@ -717,57 +510,47 @@
 	<h2><a id="basisforavector">Basis for a Vector Space</a></h2>
 	<p>
     A basis B of a vector space V is a set of vectors that meet two criteria:
-    
+
     1. Spans V <br>
     2. B is linearly independent<br>
         </p>
 	<p>
-    A standard basis, or a natural basis, are composed of vectors like: 
-    
+    A standard basis, or a natural basis, are composed of vectors like:
+
     - e<sub>1</sub> = (1, 0, 0, ..., 0) <br>
     - e<sub>2</sub> = (0, 1, 0, ..., 0) <br>
     - e<sub>n</sub> = (0, 0, ..., 1) <br>
-    Where n is the dimension you are working in, such as R<sup>2</sup> or R<sup>6</sup>. 
+    Where n is the dimension you are working in, such as R<sup>2</sup> or R<sup>6</sup>.
     </p>
     <p>
     There are are few steps to create a basis from a set of vectors:
-    
+
     1. Take the set of vectors and create an augmented matrix <br>
     2. Use row operations to transform the matrix to reduced echelon form<br>
     3. Pick out the columns with leading 1's, and match these columns up with the vectors in the original matrix. Your basis will be a set that contains only those vectors <br>
-	
+
 	</p>
     <p>
     Let's try it out with an example with the following vector set:</p>
-    <img src="../images/image27.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;">
+    <img src="../images/image27.png">
     <p>
     Notice how the basis is composed of 3 vectors, and each vector has 3 elements in it, and is in R<sup>3</sup>. Every basis will have n vectors where R<sup>n</sup>.</p>
-     
+
     <h2><a id="orthonormal">Orthonormal Basis</a></h2>
     <p>
     An orthonormal basis is a set of vectors who are all perpendicular to each other, and who all have a magnitude of 1. They are all unit vectors. An orthonormal basis is useful because it shows the relationship between the vectors regardless of magnitude. </p>
-    
+
     <h2><a id="complexnumbers">Introduction to Complex Numbers</a></h2>
     <p>
 	Quantum Mechanics relies on the usage of complex numbers because the real number set is too limited. There are many equations that do not have a real number solution, such as:
-	<img src="../images/image78.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                padding-bottom:20px;"></p>
+	<img src="../images/image78.png"></p>
     <p>
 	If you were to solve this equation you would get: <span>&#8730;(-1)</span></p>
 
     <p>
 	Now this number does not exist in the real numbers set, but if we expand into the complex numbers set, and we make i = <span>&#8730;(-1)</span>, we can now find the solutions to more equations.</p>
 
-	In this guide we will cover: 
+	In this guide we will cover:
 	<br>
     <div style="margin-left: 40px">
     1. Properties and Operations with i <br>
@@ -786,20 +569,10 @@
     </div>
     <p>
 	So we can now take values such as <span>&#8730;(-25)</span> and transform it with the following steps:</p>
-	<img src="../images/image.9.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                ">
+	<img src="../images/image.9.png">
     <p>
 	Here's another example: </p>
-	<img src="../images/image.10.png" 
-                style="display:block;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: 80%;
-                ">
+	<img src="../images/image.10.png">
     <p>
 	Notice in both the examples above, the iis behind the number, just like a variable is.</p>
 	<p>
@@ -820,7 +593,7 @@
 
 	<h2><a id="multiplicationanddivision">Multiplication and Division</a></h2>
 	<p>
-	The rules of multiplying and dividing imaginary numbers are the same rules for multiplying and dividing variables. You multiply the i variables by i variables, and you multiply the coefficients by each other. You divide the i variables by i variables, and you divide the coefficients by each other. 
+	The rules of multiplying and dividing imaginary numbers are the same rules for multiplying and dividing variables. You multiply the i variables by i variables, and you multiply the coefficients by each other. You divide the i variables by i variables, and you divide the coefficients by each other.
 	For example:</p>
 	<div style="margin-left: 40px">
     1. 8i * 3i = (8*3)(i*i) = 24i<sup>2</sup> <br>
@@ -832,7 +605,7 @@
 
 	<h2><a id="simplifying">Simplifying Imaginary Numbers</a></h2>
 	<p>
-	After multiplying or dividing imaginary numbers, you may find yourself with numbers such as: i<sup>8</sup>, i<sup>33</sup>, i<sup>-100</sup>, or i<sup>-6</sup>; and these numbers are not actually in their simplest form. 
+	After multiplying or dividing imaginary numbers, you may find yourself with numbers such as: i<sup>8</sup>, i<sup>33</sup>, i<sup>-100</sup>, or i<sup>-6</sup>; and these numbers are not actually in their simplest form.
 	Because we have 4 values of i that are easy to work with:  i = <span>&#8730;(-1)</span> , i<sup>2</sup> = -1, i<sup>3</sup>= -i, and i<sup>4</sup> = 1; we can simplify these large exponents in four steps: </p>
 	<div style="margin-left: 40px">
     1. Divide the exponent by 4 and ignore the quotient. You don't need it. <br>
@@ -862,17 +635,17 @@
 	<p>
 	A complex number is simply the addition or subtraction of a real number and an imaginary number. It takes the form of: a + bi<sup>n</sup> where a, b, and n are real numbers, and i represents any imaginary number. It's important to remember that the value bi<sup>n</sup> is in total, an imaginary number.</p>
 	<p>
-	Here are some examples of complex numbers: 
-	
+	Here are some examples of complex numbers:
+
     3 + 5i <br>
     2 - 7i<sup>5</sup> <br>
     2 - <span>&#8730;(-69)</span> <br>
     123 + <span>&#8730;(-234)</span> <br>
-	
+
 	</p>
 	<p>
-	Complex numbers that have an exponent of 1 can be plotted on the complex plane, which looks similar to the real numbers plane you have most likely dealt with before. To map the complex number on the plane you need to transform it into an ordered pair. 
-	
+	Complex numbers that have an exponent of 1 can be plotted on the complex plane, which looks similar to the real numbers plane you have most likely dealt with before. To map the complex number on the plane you need to transform it into an ordered pair.
+
     1. The real number becomes the "x coordinate" <br>
     2. The imaginary number becomes the "y coordinate" <br>
 	</p>
@@ -881,18 +654,8 @@
 
 	<p>
 	Let's practice transforming complex numbers into ordered pairs:
-	<img src="../images/image47.png" 
-                style="display:block;
-                margin-left: 40px;
-                margin-right: auto;
-                max-width: 80%;
-                ">
-	<img src="../images/image80.png" 
-                style="display:block;
-                margin-left: 40px;
-                margin-right: auto;
-                max-width: 80%;
-                "> </p>
+	<img src="../images/image47.png">
+	<img src="../images/image80.png"> </p>
 
 	Operations With Complex Numbers:
 	<p>
@@ -902,31 +665,21 @@
 	<p>
 	Similar to algebra, when adding complex numbers we can add or subtract the real numbers together, and similarly to working with imaginary numbers, we can also add or subtract the imaginary numbers from each other. </p>
 	<p>
-	For example, let's say we have the complex numbers: 
+	For example, let's say we have the complex numbers:
 	2+5i  and 4-6i, if we wanted to subtract them, we would do the following:
-	
+
     1. Set up the expression:(2+5i) - (4-6i) <br>
     2. We then foil the minus sign to the second complex number so we can get rid of the parentheses: 2+5i - 4 + 6i  <br>
     3. We can then combine like terms, which means combining the real numbers and combining the imaginary numbers: (2-4) + (5i+6i) <br>
     4. Then we add or subtract and get our final answer: -2 + 11i <br>
     * Adding is a similar process
 	</p>
-	
-	Multiplication: 
+
+	Multiplication:
 	<p>
 	Multiplying complex numbers requires foiling the complex numbers. This means foiling the first number of the first complex number, by both the first and second number of the second complex number. Then multiplying the second number of the first complex number by the first and second number of the second complex number. Then combine like terms. We'll demonstrate below.
-	<img src="../images/image76.png" 
-                style="display:block;
-                margin-left: 40px;
-                margin-right: auto;
-                max-width: 80%;
-                ">
-	<img src="../images/image77.png" 
-                style="display:block;
-                margin-left: 40px;
-                margin-right: auto;
-                max-width: 80%;
-                "> </p>
+	<img src="../images/image76.png">
+	<img src="../images/image77.png"> </p>
     <div style="margin-left: 40px">
     After foiling we get: (5*2) + (5*-i) + (2*2i) + (2i *-i) <br>
     Which we can simplify to: 10 + (-5i) + 4i + (-2i<sup>2</sup>) <br>
@@ -938,45 +691,29 @@
 	Division:
 	<p>
 	Dividing requires an extra bit of knowledge: knowing the complex conjugate of a complex number.
-	<img src="../images/image75.png" 
-                style="display:block;
-                margin-left: 40px;
-                margin-right: auto;
-                max-width: 80%;
-                "> </p>
+	<img src="../images/image75.png"> </p>
     <p>
 	The complex conjugate of a complex number, is the complex number reflected over the real number plane. This basically means that to get the complex conjugate of a complex number, make every i a -i. </p>
 	<p>
-	Here are a few examples: 
-	<img src="../images/image64.png" 
-                style="display:block;
-                margin-left: 40px;
-                margin-right: auto;
-                max-width: 80%;
-                "> </p>
+	Here are a few examples:
+	<img src="../images/image64.png"> </p>
     <p>
-	The complex conjugate is important because its vital in dividing complex numbers. To divide two complex numbers, you essentially create a fraction with a numerator and a denominator. For example if we have: 
-	6 + 3i / 2+i  we have the fraction: 
-	<img src="../images/image79.png" 
-                style="display:block;
-                margin-left: 40px;
-                margin-right: auto;
-                max-width: 80%;
-                "> </p>
+	The complex conjugate is important because its vital in dividing complex numbers. To divide two complex numbers, you essentially create a fraction with a numerator and a denominator. For example if we have:
+	6 + 3i / 2+i  we have the fraction:
+	<img src="../images/image79.png"> </p>
     <p>
-	To solve this, we have to multiply the numerator and the denominator by the complex conjugate of the denominator - in this case the complex conjugate of 2 + i. We know from earlier that the complex conjugate is 2-i. 
-	<img src="../images/image81.png" 
-                style="display:block;
-                margin-left: 40px;
-                margin-right: auto;
-                max-width: 80%;
-                "> </p>
+	To solve this, we have to multiply the numerator and the denominator by the complex conjugate of the denominator - in this case the complex conjugate of 2 + i. We know from earlier that the complex conjugate is 2-i.
+	<img src="../images/image81.png"> </p>
+
+<h2><a id="modulus">Complex Modulus</a><h2>
+  <p>The complex modulus can be thought of as the length of a complex number.  It is calculated the same way you would find the length of any line:
+  x2+y2 except because we are dealing with a real and imaginary number, we take the real number, and the imaginary number’s coefficient. For example, if we have z = 3+2i the complex modulus is:  32+22= 13. The proper notation for the complex modulus is z.</p>
 
     <h2><a id="quantumgates">Quantum Gates</a></h2>
 
     <p>
-	The most common representation of a qubit is modeled with an electron and its spin. The state of the qubit can be visualized using a Bloch Sphere where the current value is represented by &#936. The sphere has 3 axises and the spin is any location inside of the sphere. The Z axis is used to measure the the value of the qubit. If the qubit returns a value of 0, the location is at +Z on top of the sphere. If the value reads 1, the location is at -Z on the bottom of the sphere. In other words, you can think of a qubit value of 0 being the electron in its spin up state and the qubit value of 1 being the electron in the spin down state. Gates are used as operations on the qubit. An operation on a qubit is the rotation of the qubit state to a different point on the Bloch Sphere. There are multiple types of gates with some that operate on single qubit and others that operate on multiple qubits. The single qubit gates are the simplest to represent with matrices. 
-	<img src="../images/image.1.png" 
+	The most common representation of a qubit is modeled with an electron and its spin. The state of the qubit can be visualized using a Bloch Sphere where the current value is represented by &#936. The sphere has 3 axises and the spin is any location inside of the sphere. The Z axis is used to measure the the value of the qubit. If the qubit returns a value of 0, the location is at +Z on top of the sphere. If the value reads 1, the location is at -Z on the bottom of the sphere. In other words, you can think of a qubit value of 0 being the electron in its spin up state and the qubit value of 1 being the electron in the spin down state. Gates are used as operations on the qubit. An operation on a qubit is the rotation of the qubit state to a different point on the Bloch Sphere. There are multiple types of gates with some that operate on single qubit and others that operate on multiple qubits. The single qubit gates are the simplest to represent with matrices.
+	<img src="../images/image.1.png"
                 style="display:block;
                 margin-left: auto;
                 margin-right: auto;
@@ -988,21 +725,21 @@
 	A Pauli gate operates on a single qubit at a time to rotate its state and the rotations are measured in radians. There are 3 different types of Pauli Gates, X, Y, and Z. Each gate corresponds to an axis on the a Bloch Sphere. The X gate is identical to the NOT gate in classical computing in that it inverts the given value. If the current state of the qubit is 0 at the top of the sphere, performing a Pauli X operation rotates the state around the x-axis by &#960 radians (180 degrees) placing the new state at the bottom with a value of 1. All gates in quantum computing can be represented by a matrix. To perform the gate operation using a matrix, you simply multiply the gate matrix by the qubit matrix, but because of how matrix multiplication works, the gate must always be to the left of the qubit matrix. </p>
 	<p>
 	Pauli X Gate
-	<img src="../images/image.3.png" 
+	<img src="../images/image.3.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 80%;
-                "> 
+                ">
                 multiplied with qubit
-    <img src="../images/image.4.png" 
+    <img src="../images/image.4.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 80%;
                 ">
                 yields
-     <img src="../images/image.5.png" 
+     <img src="../images/image.5.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
@@ -1010,8 +747,8 @@
                 ">
        			. </p>
     <p>
-	The Y gate acts in the say way as the X but rotates the state about the y-axis by &#960 radians. The Y gate is interesting because it uses the imaginary numbers i and -i instead of a value of 1. The matrix for the Y gate is 
-	<img src="../images/image.6.png" 
+	The Y gate acts in the say way as the X but rotates the state about the y-axis by &#960 radians. The Y gate is interesting because it uses the imaginary numbers i and -i instead of a value of 1. The matrix for the Y gate is
+	<img src="../images/image.6.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
@@ -1020,20 +757,20 @@
 	. Similarly, the Z gate rotates about the z-axis by &#960 radians. Unlike the X and Y gates, the Z gate has no effect if the state is at 0. A Z gate operation on 0 yields 0, but the operation on 1 yields -1. This can be seen in the following matrix multiplications. </p>
 	<p>
 	Z-Gate
-	<img src="../images/image.7.png" 
+	<img src="../images/image.7.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 80%;
                 "> multiplied with the qubit
-    <img src="../images/image.4.png" 
+    <img src="../images/image.4.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 80%;
                 ">
                 yields
-    <img src="../images/image.8.png" 
+    <img src="../images/image.8.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
@@ -1046,7 +783,7 @@
 	Although they act on quantum properties of electrons and change the spin, Pauli gates still only return a single value. The real power of quantum computing occurs when you introduce superposition and that's where the Hadamard Gate comes in. A qubit naturally wants to be in superposition, but we cannot have values that start off in superposition (because observing superposition forces the qubit to choose a value). The qubit value must be initialized to a definite known state first before it can be operated on. The Hadamard gate is used to turn initialized qubits back into their natural state of uncertainty where there's 50/50 odds of the qubit being spin up or spin down. This operation is represented on a Bloch sphere as a rotation about the x-as by  radians and then a rotation about the y-axis by &#960/2 radians. </p>
 	<p>
 	The matrix representation for the Hadamard gate is
-	<img src="../images/image.11.png" 
+	<img src="../images/image.11.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
@@ -1057,7 +794,7 @@
 	The Pauli Z gate is actually a special case of the phase shift gate. The properties of phase shift gates are that they do not operate on 0 (spin up) and perform e<sup>i&#936</sup> on 1 (spin down). The symbol &#936 is any value between 0 and 2&#960. For example, the Pauli Z gate has a phase &#936=&#960. Other common phases are &#960/2, &#960/4, &#960/8.</p>
 	<p>
 	The general phase shift gate matrix is
-	<img src="../images/image.12.png" 
+	<img src="../images/image.12.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
@@ -1068,21 +805,21 @@
 	Controlled gates are multi qubit gates that have at least one qubit for a control and at least one qubit for a target. The gate will only operate on the target qubit if the control qubit is in a certain state. Any quantum gate can become a controlled gate simply by adding the identity matrix to the top left corner of the gate matrix and filing in the rest with zeros. For example, the Pauli X gate is always referred to as the quantum NOT.</p>
 	<p>
 	If the identity matrix I is
-	<img src="../images/image.13.png" 
+	<img src="../images/image.13.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 80%;
                 ">
                 and the NOT matrix is
-    <img src="../images/image.3.png" 
+    <img src="../images/image.3.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
                 max-width: 80%;
                 ">
                 then the Controlled-NOT or CNOT is
-    <img src="../images/image.14.png" 
+    <img src="../images/image.14.png"
                 style="display:inline;
                 margin-left: auto;
                 margin-right: auto;
@@ -1092,8 +829,8 @@
 
 
 </div>
-    <div class="column side"> 
-        <div class="aside top">        
+    <div class="column side">
+        <div class="aside top">
             <h2>Jump To . . . </h2>
             <div class="zoom">
             <a href="qinfo.html#linearalg">Introduction to Linear Algebra</a></div>
@@ -1119,9 +856,10 @@
             <div class="zoom"><a href="qinfo.html#basisforavector">Basis for a Vector Space</a></div>
             <div class="zoom"><a href="qinfo.html#orthonormal">Orthonormal Basis</a></div>
             <div class="zoom"><a href="qinfo.html#complexnumbers">Introduction to Complex Numbers</a></div>
-            <div class="zoom"><a href="qinfo.html#withi">Properties of and Operations with i</a></div>
+            <div class="zoom"><a href="qinfo.html#withi">Properties and Operations with i</a></div>
             <div class="zoom"><a href="qinfo.html#additionandsubtraction">Addition and Subtraction</a></div>
             <div class="zoom"><a href="qinfo.html#multiplicationanddivision">Multiplication and Division</a></div>
+            <div class="zoom"><a href="qinfo.html#modulus">Complex Modulus</a></div>
             <div class="zoom"><a href="qinfo.html#simplifying">Simplifying Imaginary Numbers</a></div>
             <div class="zoom"><a href="qinfo.html#operationsofcomplex">Operations and Properties of Complex Numbers</a></div>
             <div class="zoom"><a href="qinfo.html#quantumgates">Quantum Gates</a></div>
@@ -1134,9 +872,9 @@
         </div>
     </div>
     </div>
-    
+
 <footer>
-    Last Updated: October 15, 2018 | 
+    Last Updated: October 15, 2018 |
     <a href="../home.html">Home</a> |
     <a href="about.html">About</a> |
     <a href="../quantuminfo/qinfo.html">Quantum Info</a> |
@@ -1144,7 +882,7 @@
     <a href="../contactus/contactus.html">Contact Us</a> |
     KSU IT4203 &copy; 2018
 </footer>
-    
+
 </body>
 
 </html>
