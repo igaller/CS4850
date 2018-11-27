@@ -109,6 +109,7 @@
         text-align: center;
      }
 
+
      button a {
          text-decoration: none;
          color: black;
@@ -140,6 +141,7 @@
         }
     }
 
+
 </style>
 
 </head>
@@ -154,13 +156,16 @@
 
     <a href="../home.html">Home</a>
 
-    <a  class="active" href="qutip.html">Qutip</a>
+    <a href="qutip.html">Qutip</a>
 
     <a href="../quantuminfo/qinfo.html">Quantum Info</a>
 
     <a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a>
 
     <a href="../contactus/contactus.html">Contact Us</a>
+
+    <a href="research.html">Research</a>
+
   </div>
 
 </div>
@@ -168,72 +173,28 @@
 <div class="row">
 
     <div class="column body">
-    <h2>What is QuTip?</h2>
 
-
-    <h2>Qutip Setup</h2>
-
-    <h3>Installing Anaconda</h3>
-
-      <ul>
-        <li>	Anaconda is a tool to automatically download and setup various Python packages </li>
-        <li>	Go to <a href="https://www.anaconda.com/download"></a> and click on the download link that matches your operating system (Windows, Mac, Linux)</li>
-        <li>	Choose Python 3.7 and click “Download”</li>
-        <li>	Once finished downloading, click the installer and following the instruction in the wizard</li>
-        <li>	Will ask if you would like to also install Visual Studio Code. If you do not already have a text editor, it is recommended that you choose this option. </li>
-      </ul>
-
-    <h3>Setting up the Qutip environment</h3>
-      <ul>
-    	   <li> Windows
-           <li>	Mac
-              <ul>
-                <li>	Open Terminal
-                <li>	Type “conda create -n qutip-env python=3” and press enter
-                <li>	When it says “The following NEW packages will be installed” type ‘y’ and press enter
-                <li>	Your Qutip environment is now created
-              </ul>
-          <li>	Linux
-      </ul>
-
-    <h3>Installing packages in your Qutip environment</h3>
-        <ul>
-          <li>	Type source activate qutip-env and press enter</li>
-    	    <li>Type “conda install numpy scipy cython matplotlib nose jupyter notebook spyder”, this will install all the prerequisite packages needed by Qutip</li>
-    	    <li>Type ‘y’</li>
-    	    <li>Type “conda config --append channels conda-forge”</li>
-    	    <li>Type “conda install qutip”</li>
-          <li>Qutip should now be setup on your system under your Conda environment</li>
-          <li>To test if setup completed successfully, start an interactive python session by typing “python”</li>
-          <li>Once in the interactive python session type “import qutip.testing as qt” and press enter</li>
-          <li>Then type “qt.run()” and press enter, this will run a suite of test scritpts to make sure everything is working. It’s okay if you get warnings.</li>
-    </ul>
 
     </div>
 
     <div class="column side">
         <div class="aside top">
-            <h2>Where to Find Qutip</h2>
-            <div class="buttons">
-            <button><a href="http://qutip.org/index.html">Go to QuTip Site</a></button>
-            <button><a href="http://qutip.org/download.html">Download</a></button>
-                </div>
 
-    </div>
-    </div>
+
+        </div>
     </div>
 
-    <footer>
-    Last Updated: November 27, 2018 |
-    <a href="../home.html">Home</a> |
-    <a href="qutip.html">Qutip</a> |
-    <a href="../quantuminfo/qinfo.html">Quantum Info</a> |
-    <a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a> |
-    <a href="../contactus/contactus.html">Contact Us</a> |
-    <a href="../research/research.html">Research</a>"
-    KSU CS4850 &copy; 2018
-    </footer>
+<footer>
+Last Updated: November 27, 2018 |
+<a href="../home.html">Home</a> |
+<a href="qutip.html">Qutip</a> |
+<a href="../quantuminfo/qinfo.html">Quantum Info</a> |
+<a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a> |
+<a href="../contactus/contactus.html">Contact Us</a> |
+<a href="research.html">Research</a>"
+KSU CS4850 &copy; 2018
+</footer>
 
-    </body>
+</body>
 
 </html>
