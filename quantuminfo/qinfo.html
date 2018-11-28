@@ -149,6 +149,10 @@
        padding-bottom:20px;
     }
 
+    }
+
+    }
+
     footer {
         text-align: center;
         font-size: .8em;
@@ -192,9 +196,6 @@
     <a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a>
 
     <a href="../contactus/contactus.html">Contact Us</a>
-
-    <a href="../research/research.html">Research</a>
-
   </div>
 
 </div>
@@ -715,12 +716,12 @@
     <h2><a id="quantumgates">Quantum Gates</a></h2>
 
     <p>
-	The most common representation of a qubit is modeled with an electron and its spin. The state of the qubit can be visualized using a Bloch Sphere where the current value is represented by <>. The sphere has 3 axises and the spin is any location inside of the sphere. The Z axis is used to measure the the value of the qubit. If the qubit returns a value of 0, the location is at +Z on top of the sphere. If the value reads 1, the location is at -Z on the bottom of the sphere. In other words, you can think of a qubit value of 0 being the electron in its spin up state and the qubit value of 1 being the electron in the spin down state. Gates are used as operations on the qubit. An operation on a qubit is the rotation of the qubit state to a different point on the Bloch Sphere. There are multiple types of gates with some that operate on single qubit and others that operate on multiple qubits. The single qubit gates are the simplest to represent with matrices.
+	The most common representation of a qubit is modeled with an electron and its spin. The state of the qubit can be visualized using a Bloch Sphere where the current value is represented by PSI. The sphere has 3 axises and the spin is any location inside of the sphere. The Z axis is used to measure the the value of the qubit. If the qubit returns a value of 0, the location is at +Z on top of the sphere. If the value reads 1, the location is at -Z on the bottom of the sphere. In other words, you can think of a qubit value of 0 being the electron in its spin up state and the qubit value of 1 being the electron in the spin down state. Gates are used as operations on the qubit. An operation on a qubit is the rotation of the qubit state to a different point on the Bloch Sphere. There are multiple types of gates with some that operate on single qubit and others that operate on multiple qubits. The single qubit gates are the simplest to represent with matrices.
 	<img src="../images/image.1.png"> </p>
 
     <h2><a id="pauli">Pauli Gates</a></h2>
     <p>
-	A Pauli gate operates on a single qubit at a time to rotate its state and the rotations are measured in radians. There are 3 different types of Pauli Gates, X, Y, and Z. Each gate corresponds to an axis on the a Bloch Sphere. The X gate is identical to the NOT gate in classical computing in that it inverts the given value. If the current state of the qubit is 0 at the top of the sphere, performing a Pauli X operation rotates the state around the x-axis by <> radians (180 degrees) placing the new state at the bottom with a value of 1. All gates in quantum computing can be represented by a matrix. To perform the gate operation using a matrix, you simply multiply the gate matrix by the qubit matrix, but because of how matrix multiplication works, the gate must always be to the left of the qubit matrix. </p>
+	A Pauli gate operates on a single qubit at a time to rotate its state and the rotations are measured in radians. There are 3 different types of Pauli Gates, X, Y, and Z. Each gate corresponds to an axis on the a Bloch Sphere. The X gate is identical to the NOT gate in classical computing in that it inverts the given value. If the current state of the qubit is 0 at the top of the sphere, performing a Pauli X operation rotates the state around the x-axis by PI radians (180 degrees) placing the new state at the bottom with a value of 1. All gates in quantum computing can be represented by a matrix. To perform the gate operation using a matrix, you simply multiply the gate matrix by the qubit matrix, but because of how matrix multiplication works, the gate must always be to the left of the qubit matrix. </p>
 	<p>
 	Pauli X Gate
 	<img src="../images/image.3.png">
@@ -730,9 +731,9 @@
      <img src="../images/image.5.png">
        			. </p>
     <p>
-	The Y gate acts in the say way as the X but rotates the state about the y-axis by <> radians. The Y gate is interesting because it uses the imaginary numbers i and -i instead of a value of 1. The matrix for the Y gate is
-	<img src="../images/image.6.png">
-	. Similarly, the Z gate rotates about the z-axis by <> radians. Unlike the X and Y gates, the Z gate has no effect if the state is at 0. A Z gate operation on 0 yields 0, but the operation on 1 yields -1. This can be seen in the following matrix multiplications. </p>
+	The Y gate acts in the say way as the X but rotates the state about the y-axis by PI radians. The Y gate is interesting because it uses the imaginary numbers i and -i instead of a value of 1. The matrix for the Y gate is
+	<img src="../images/image.6.png">.
+	Similarly, the Z gate rotates about the z-axis by PI radians. Unlike the X and Y gates, the Z gate has no effect if the state is at 0. A Z gate operation on 0 yields 0, but the operation on 1 yields -1. This can be seen in the following matrix multiplications. </p>
 	<p>
 	Z-Gate
 	<img src="../images/image.7.png"> multiplied with the qubit
@@ -743,13 +744,13 @@
 
     <h2><a id="hadamard">Hadamard Gates</a></h2>
     <p>
-	Although they act on quantum properties of electrons and change the spin, Pauli gates still only return a single value. The real power of quantum computing occurs when you introduce superposition and that's where the Hadamard Gate comes in. A qubit naturally wants to be in superposition, but we cannot have values that start off in superposition (because observing superposition forces the qubit to choose a value). The qubit value must be initialized to a definite known state first before it can be operated on. The Hadamard gate is used to turn initialized qubits back into their natural state of uncertainty where there's 50/50 odds of the qubit being spin up or spin down. This operation is represented on a Bloch sphere as a rotation about the x-as by  radians and then a rotation about the y-axis by <> radians. </p>
+	Although they act on quantum properties of electrons and change the spin, Pauli gates still only return a single value. The real power of quantum computing occurs when you introduce superposition and that's where the Hadamard Gate comes in. A qubit naturally wants to be in superposition, but we cannot have values that start off in superposition (because observing superposition forces the qubit to choose a value). The qubit value must be initialized to a definite known state first before it can be operated on. The Hadamard gate is used to turn initialized qubits back into their natural state of uncertainty where there's 50/50 odds of the qubit being spin up or spin down. This operation is represented on a Bloch sphere as a rotation about the x-as by  radians and then a rotation about the y-axis by PI/2 radians. </p>
 	<p>
 	The matrix representation for the Hadamard gate is
 	<img src="../images/image.11.png">.</p>
     <h2><a id="phaseshift">Phase Shift Gates</a></h2>
     <p>
-	The Pauli Z gate is actually a special case of the phase shift gate. The properties of phase shift gates are that they do not operate on 0 (spin up) and perform e<sup>i<></sup> on 1 (spin down). The symbol <> is any value between 0 and 2 <>. For example, the Pauli Z gate has a phase <>. Other common phases are <>.</p>
+	The Pauli Z gate is actually a special case of the phase shift gate. The properties of phase shift gates are that they do not operate on 0 (spin up) and perform e<sup>iPHI</sup> on 1 (spin down). The symbol PHI is any value between 0 and 2PI. For example, the Pauli Z gate has a phase PHI = PI. Other common phases are PI/2, PI/4, and PI/8.</p>
 	<p>
 	The general phase shift gate matrix is
 	<img src="../images/image.12.png">.</p>
