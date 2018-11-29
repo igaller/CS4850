@@ -140,6 +140,18 @@
         }
     }
 
+    tr td {
+      border: 1px solid black;
+    }
+
+    .tdleft {
+      width: 70px;
+    }
+
+    .tdright {
+
+    }
+
 </style>
 
 </head>
@@ -172,7 +184,6 @@
 
     <div class="column body">
     <h2>What is QuTip?</h2>
-
 
     <h2>Qutip Setup</h2>
 
@@ -212,6 +223,531 @@
           <li>Then type “qt.run()” and press enter, this will run a suite of test scritpts to make sure everything is working. It’s okay if you get warnings.</li>
     </ul>
 
+<h2>QuTip Functions</h2>
+
+<p>These are the common Qutip functions that have been and will be used within the Qutip Quantum Simulator (especially within this project). Most of this information can be found on http://qutip.org/docs/latest/apidoc/apidoc.html. </p>
+
+<h3><b>basis(N, n=0, offset=0)</b></h3>
+<p>Parameters:
+  <ul>
+<li><b>N</b> : int <br>
+Number of Fock states in Hilbert space.</li>
+<li><b>n</b> : int <br>
+Integer corresponding to desired number state, defaults to 0 if omitted.</li>
+<li><b>offset</b> : int (default 0)
+The lowest number state that is included in the finite number state representation of the state.</li>
+Returns:
+<li><b>state</b> : qobj<br>
+Qobj representing the requested number state |n>.</li>
+</ul>
+<p>basis(N, 0) = ground state </p>
+<p>basis(N, 1) = ground state </p>
+
+</p>
+<p><b>Example:</b><br><br>
+
+  >>> basis(5,2)<br>
+Quantum object: dims = [[5], [1]], shape = [5, 1], type = ket<br>
+Qobj data =<br>
+[[ 0.+0.j]<br>
+ [ 0.+0.j]<br>
+ [ 1.+0.j]<br>
+ [ 0.+0.j]<br>
+ [ 0.+0.j]]<br>
+
+</p>
+<b>qeye(N)</b>
+
+<h3><b>Identity operator</b></h3>
+<p>Parameters:<br>
+  <ul>
+<li><b>N</b> : int or list of ints<br>
+Dimension of Hilbert space. If provided as a list of ints, then the dimension is the product over this list, but the dims property of the new Qobj are set to this list.<br>
+Returns:</li>
+<b>oper</b> : qobj<br>
+Identity operator Qobj.
+</ul>
+<b>Example:</b><br><br>
+
+>>> qeye(3)<br>
+Quantum object: dims = [[3], [3]], shape = [3, 3], type = oper, isHerm = True<br>
+Qobj data =<br>
+[[ 1.  0.  0.]<br>
+ [ 0.  1.  0.]<br>
+ [ 0.  0.  1.]]<br><br>
+
+
+<b>tensor(*args)</b>
+
+<h3><b>Calculates the tensor product of input operators.</b></h3>
+
+<p>Parameters:<br>
+  <ul>
+<li><b>args</b> : array_like<br>
+list or array of quantum objects for tensor product.<br>
+Returns:</li>
+<li><b>obj</b> : qobj<br>
+A composite quantum object.
+</ul>
+<b>Example</b>:<br><br>
+
+>>> tensor([sigmax(), sigmax()])<br>
+Quantum object: dims = [[2, 2], [2, 2]], shape = [4, 4], type = oper, isHerm = True<br>
+Qobj data =<br>
+[[ 0.+0.j  0.+0.j  0.+0.j  1.+0.j]<br>
+ [ 0.+0.j  0.+0.j  1.+0.j  0.+0.j]<br>
+ [ 0.+0.j  1.+0.j  0.+0.j  0.+0.j]<br>
+ [ 1.+0.j  0.+0.j  0.+0.j  0.+0.j]]<br><br>
+
+<b>hadamard_transform(N=1)</b><br><br>
+
+Quantum object representing the N-qubit Hadamard gate.<br><br>
+
+Returns:<br>
+<ul>
+<p><li><b>q</b> : qobj<br>
+Quantum object representation of the N-qubit Hadamard gate.</li>
+</ul>
+
+<b>sigmax()</b><br><br>
+
+Pauli spin ½ sigma-x operator<br><br>
+
+<b>Example:</b><br>
+
+>>> sigmax()<br>
+Quantum object: dims = [[2], [2]], shape = [2, 2], type = oper, isHerm = False<br>
+Qobj data =<br>
+[[ 0.  1.]<br>
+ [ 1.  0.]]<br><br>
+
+
+<b>Classes</b><br>
+
+<h3><b>Qobj</b></h3>
+<b><i>class Qobj(inpt=None, dims=[[], []], shape=[], type=None, isherm=None, copy=True, fast=False, superrep=None)[source]</i></b><br>
+A class for representing quantum objects, such as quantum operators and states.<br>
+The Qobj class is the QuTiP representation of quantum operators and state vectors. This class also implements math operations +,-,* between Qobj instances (and / by a C-number), as well as a collection of common operator/state operations. The Qobj constructor optionally takes a dimension list and/or shape list as arguments.<br>
+<b>Parameters:</b>
+<ul>
+<li><b>inpt</b> : array_like
+Data for vector/matrix representation of the quantum object.
+<li><b>dims</b> : list
+Dimensions of object used for tensor products.</li>
+<li><b>shape</b> : list
+Shape of underlying data structure (matrix shape).</li>
+<li><b>copy</b> : bool
+Flag specifying whether Qobj should get a copy of the input data, or use the original.</li>
+<li><b>fast</b> : bool
+Flag for fast qobj creation when running ode solvers. This parameter is used internally only.</li><br>
+</ul>
+
+Attributes<br>
+<table>
+  <tr>
+<td class="tdleft">data</td>
+<td>(array_like) Sparse matrix characterizing the quantum object.</td></tr>
+<td class="tdleft">dims</td>
+<td>(list) List of dimensions keeping track of the tensor structure.</td></tr>
+<td class="tdleft">shape</td>
+<td>(list) Shape of the underlying data array.</td></tr>
+<td class="tdleft">type</td>
+<td>(str) Type of quantum object: ‘bra’, ‘ket’, ‘oper’, ‘operator-ket’, ‘operator-bra’, or ‘super’.</td></tr>
+<td class="tdleft">superrep</td>
+<td>(str) Representation used if type is ‘super’. One of ‘super’ (Liouville form) or ‘choi’ (Choi matrix with tr = dimension).</td></tr>
+<td class="tdleft">isherm</td>
+<td>(bool) Indicates if quantum object represents Hermitian operator.</td></tr>
+<td class="tdleft">iscp</td>
+<td>(bool) Indicates if the quantum object represents a map, and if that map is completely positive (CP).</td></tr>
+<td class="tdleft">ishp</td>
+<td>(bool) Indicates if the quantum object represents a map, and if that map is hermicity preserving (HP).</td></tr>
+<td class="tdleft">istp</td>
+<td>(bool) Indicates if the quantum object represents a map, and if that map is trace preserving (TP).</td></tr>
+<td class="tdleft">iscptp</td>
+<td>(bool) Indicates if the quantum object represents a map that is completely positive and trace preserving (CPTP).</td></tr>
+<td class="tdleft">isket</td>
+<td>(bool) Indicates if the quantum object represents a ket.</td></tr>
+<td class="tdleft">isbra</td>
+<td>(bool) Indicates if the quantum object represents a bra.</td></tr>
+<td class="tdleft">isoper</td>
+<td>(bool) Indicates if the quantum object represents an operator.</td></tr>
+<td class="tdleft">issuper</td>
+<td>(bool) Indicates if the quantum object represents a superoperator.</td></tr>
+<td class="tdleft">isoperket</td>
+<td>(bool) Indicates if the quantum object represents an operator in column vector form.</td></tr>
+<td class="tdleft">isoperbra</td>
+<td>(bool) Indicates if the quantum object represents an operator in row vector form.</td></tr>
+</table><br>
+
+Methods<br>
+<table>
+  <tr>
+<td>copy()
+<td>Create copy of Qobj</td></tr>
+<td>conj()
+<td>Conjugate of quantum object.</td></tr>
+<td>cosm()
+<td>Cosine of quantum object.</td></tr>
+<td>dag()
+<td>Adjoint (dagger) of quantum object.</td></tr>
+<td>dnorm()
+<td>Diamond norm of quantum operator.</td></tr>
+<td>dual_chan()
+<td>Dual channel of quantum object representing a CP map.</td></tr>
+<td>eigenenergies(sparse=False, sort=’low’, eigvals=0, tol=0, maxiter=100000)
+<td>Returns eigenenergies (eigenvalues) of a quantum object.</td></tr>
+<td>eigenstates(sparse=False, sort=’low’, eigvals=0, tol=0, maxiter=100000)
+<td>Returns eigenenergies and eigenstates of quantum object.</td></tr>
+<td>expm()
+<td>Matrix exponential of quantum object.</td></tr>
+<td>full(order=’C’)
+<td>Returns dense array of quantum object data attribute.</td></tr>
+<td>groundstate(sparse=False, tol=0, maxiter=100000)
+<td>Returns eigenvalue and eigenket for the groundstate of a quantum object.</td></tr>
+<td>matrix_element(bra, ket)
+<td>Returns the matrix element of operator between bra and ket vectors.</td></tr>
+<td>norm(norm=’tr’, sparse=False, tol=0, maxiter=100000)
+<td>Returns norm of a ket or an operator.</td></tr>
+<td>permute(order)
+<td>Returns composite qobj with indices reordered.</td></tr>
+<td>ptrace(sel)
+<td>Returns quantum object for selected dimensions after performing partial trace.</td></tr>
+<td>sinm()
+<td>Sine of quantum object.</td></tr>
+<td>sqrtm()
+<td>Matrix square root of quantum object.</td></tr>
+<td>tidyup(atol=1e-12)
+<td>Removes small elements from quantum object.</td></tr>
+<td>tr()
+<td>Trace of quantum object.</td></tr>
+<td>trans()
+<td>Transpose of quantum object.</td></tr>
+<td>transform(inpt, inverse=False)
+<td>Performs a basis transformation defined by inpt matrix.</td></tr>
+<td>trunc_neg(method=’clip’)
+<td>Removes negative eigenvalues and returns a new Qobj that is a valid density operator.</td></tr>
+<td>unit(norm=’tr’, sparse=False, tol=0, maxiter=100000)
+<td>Returns normalized quantum object.</td></tr>
+  </table><br>
+check_herm()[source]
+Check if the quantum object is hermitian.
+Returns:
+isherm : bool
+Returns the new value of isherm property.
+conj()[source]
+Conjugate operator of quantum object.
+copy()[source]
+Create identical copy
+cosm()[source]
+Cosine of a quantum operator.
+Operator must be square.
+Returns:
+oper : qobj
+Matrix cosine of operator.
+Raises:
+TypeError
+Quantum object is not square.
+Notes
+Uses the Q.expm() method.
+dag()[source]
+Adjoint operator of quantum object.
+diag()[source]
+Diagonal elements of quantum object.
+Returns:
+diags : array
+Returns array of real values if operators is Hermitian, otherwise complex values are returned.
+dnorm(B=None)[source]
+Calculates the diamond norm, or the diamond distance to another operator.
+Parameters:
+B : Qobj or None
+If B is not None, the diamond distance d(A, B) = dnorm(A - B) between this operator and B is returned instead of the diamond norm.
+Returns:
+d : float
+Either the diamond norm of this operator, or the diamond distance from this operator to B.
+dual_chan()[source]
+Dual channel of quantum object representing a completely positive map.
+eigenenergies(sparse=False, sort='low', eigvals=0, tol=0, maxiter=100000)[source]
+Eigenenergies of a quantum object.
+Eigenenergies (eigenvalues) are defined for operators or superoperators only.
+Parameters:
+sparse : bool
+Use sparse Eigensolver
+sort : str
+Sort eigenvalues ‘low’ to high, or ‘high’ to low.
+eigvals : int
+Number of requested eigenvalues. Default is all eigenvalues.
+tol : float
+Tolerance used by sparse Eigensolver (0=machine precision). The sparse solver may not converge if the tolerance is set too low.
+maxiter : int
+Maximum number of iterations performed by sparse solver (if used).
+Returns:
+eigvals : array
+Array of eigenvalues for operator.
+Notes:
+The sparse eigensolver is much slower than the dense version. Use sparse only if memory requirements demand it.
+eigenstates(sparse=False, sort='low', eigvals=0, tol=0, maxiter=100000)[source]
+Eigenstates and eigenenergies.
+Eigenstates and eigenenergies are defined for operators and superoperators only.
+Parameters:
+sparse : bool
+Use sparse Eigensolver
+sort : str
+Sort eigenvalues (and vectors) ‘low’ to high, or ‘high’ to low.
+eigvals : int
+Number of requested eigenvalues. Default is all eigenvalues.
+tol : float
+Tolerance used by sparse Eigensolver (0 = machine precision). The sparse solver may not converge if the tolerance is set too low.
+maxiter : int
+Maximum number of iterations performed by sparse solver (if used).
+Returns:
+eigvals : array
+Array of eigenvalues for operator.
+eigvecs : array
+Array of quantum operators representing the oprator eigenkets. Order of eigenkets is determined by order of eigenvalues.
+Notes
+The sparse eigensolver is much slower than the dense version. Use sparse only if memory requirements demand it.
+eliminate_states(states_inds, normalize=False)[source]
+Creates a new quantum object with states in state_inds eliminated.
+Parameters:
+states_inds : list of integer
+The states that should be removed.
+normalize : True / False
+Weather or not the new Qobj instance should be normalized (default is False). For Qobjs that represents density matrices or state vectors normalized should probably be set to True, but for Qobjs that represents operators in for example an Hamiltonian, normalize should be False.
+Returns:
+q : Qobj
+A new instance of qutip.Qobj that contains only the states corresponding to indices that are not in state_inds.
+Notes: Experimental.
+
+static evaluate(qobj_list, t, args)[source]
+Evaluate a time-dependent quantum object in list format. For example,
+qobj_list = [H0, [H1, func_t]]
+is evaluated to
+Qobj(t) = H0 + H1 * func_t(t, args)
+and
+qobj_list = [H0, [H1, ‘sin(w * t)’]]
+is evaluated to
+Qobj(t) = H0 + H1 * sin(args[‘w’] * t)
+Parameters:
+qobj_list : list
+A nested list of Qobj instances and corresponding time-dependent coefficients.
+t : float
+The time for which to evaluate the time-dependent Qobj instance.
+args : dictionary
+A dictionary with parameter values required to evaluate the time-dependent Qobj intance.
+Returns:
+output : Qobj
+A Qobj instance that represents the value of qobj_list at time t.
+expm(method='dense')[source]
+Matrix exponential of quantum operator.
+Input operator must be square.
+Parameters:
+method : str {‘dense’, ‘sparse’}
+Use set method to use to calculate the matrix exponentiation. The available choices includes ‘dense’ and ‘sparse’. Since the exponential of a matrix is nearly always dense, method=’dense’ is set as default.s
+Returns:
+oper : qobj
+Exponentiated quantum operator.
+Raises:
+TypeError
+Quantum operator is not square.
+extract_states(states_inds, normalize=False)[source]
+Qobj with states in state_inds only.
+Parameters:
+states_inds : list of integer
+The states that should be kept.
+normalize : True / False
+Weather or not the new Qobj instance should be normalized (default is False). For Qobjs that represents density matrices or state vectors normalized should probably be set to True, but for Qobjs that represents operators in for example an Hamiltonian, normalize should be False.
+Returns:
+q : Qobj
+A new instance of qutip.Qobj that contains only the states corresponding to the indices in state_inds.
+Notes: Experimental.
+
+full(order='C', squeeze=False)[source]
+Dense array from quantum object.
+Parameters:
+order : str {‘C’, ‘F’}
+Return array in C (default) or Fortran ordering.
+squeeze : bool {False, True}
+Squeeze output array.
+Returns:
+data : array
+Array of complex data from quantum objects data attribute.
+groundstate(sparse=False, tol=0, maxiter=100000, safe=True)[source]
+Ground state Eigenvalue and Eigenvector.
+Defined for quantum operators or superoperators only.
+Parameters:
+sparse : bool
+Use sparse Eigensolver
+tol : float
+Tolerance used by sparse Eigensolver (0 = machine precision). The sparse solver may not converge if the tolerance is set too low.
+maxiter : int
+Maximum number of iterations performed by sparse solver (if used).
+safe : bool (default=True)
+Check for degenerate ground state
+Returns:
+eigval : float
+Eigenvalue for the ground state of quantum operator.
+eigvec : qobj
+Eigenket for the ground state of quantum operator.
+Notes:
+The sparse eigensolver is much slower than the dense version. Use sparse only if memory requirements demand it.
+
+matrix_element(bra, ket)[source]
+Calculates a matrix element.
+Gives the matrix element for the quantum object sandwiched between a bra and ket vector.
+Parameters:
+bra : qobj
+Quantum object of type ‘bra’.
+ket : qobj
+Quantum object of type ‘ket’.
+Returns:
+elem : complex
+Complex valued matrix element.
+Raises:
+TypeError
+Can only calculate matrix elements between a bra and ket quantum object.
+norm(norm=None, sparse=False, tol=0, maxiter=100000)[source]
+Norm of a quantum object.
+Default norm is L2-norm for kets and trace-norm for operators. Other ket and operator norms may be specified using the norm and argument.
+Parameters:
+norm : str
+Which norm to use for ket/bra vectors: L2 ‘l2’, max norm ‘max’, or for operators: trace ‘tr’, Frobius ‘fro’, one ‘one’, or max ‘max’.
+sparse : bool
+Use sparse eigenvalue solver for trace norm. Other norms are not affected by this parameter.
+tol : float
+Tolerance for sparse solver (if used) for trace norm. The sparse solver may not converge if the tolerance is set too low.
+maxiter : int
+Maximum number of iterations performed by sparse solver (if used) for trace norm.
+Returns:
+norm : float
+The requested norm of the operator or state quantum object.
+Notes:
+The sparse eigensolver is much slower than the dense version. Use sparse only if memory requirements demand it.
+
+overlap(state)[source]
+Overlap between two state vectors.
+Gives the overlap (scalar product) for the quantum object and state state vector.
+Parameters:
+state : qobj
+Quantum object for a state vector of type ‘ket’ or ‘bra’.
+Returns:
+overlap : complex
+Complex valued overlap.
+Raises:
+TypeError
+Can only calculate overlap between a bra and ket quantum objects.
+permute(order)[source]
+Permutes a composite quantum object.
+Parameters:
+order : list/array
+List specifying new tensor order.
+Returns:
+P : qobj
+Permuted quantum object.
+ptrace(sel)[source]
+Partial trace of the quantum object.
+Parameters:
+sel : int/list
+An int or list of components to keep after partial trace.
+Returns:
+oper : qobj
+Quantum object representing partial trace with selected components remaining.
+Notes:
+This function is identical to the qutip.qobj.ptrace function that has been deprecated
+.
+sinm()[source]
+Sine of a quantum operator.
+Operator must be square.
+Returns:
+oper : qobj
+Matrix sine of operator.
+Raises:
+TypeError
+Quantum object is not square.
+Notes
+Uses the Q.expm() method.
+
+sqrtm(sparse=False, tol=0, maxiter=100000)[source]
+Sqrt of a quantum operator.
+Operator must be square.
+Parameters:
+sparse : bool
+Use sparse eigenvalue/vector solver.
+tol : float
+Tolerance used by sparse solver (0 = machine precision).
+maxiter : int
+Maximum number of iterations used by sparse solver.
+Returns:
+oper : qobj
+Matrix square root of operator.
+Raises:
+TypeError
+Quantum object is not square.
+Notes:
+The sparse eigensolver is much slower than the dense version. Use sparse only if memory requirements demand it.
+
+tidyup(atol=None)[source]
+Removes small elements from the quantum object.
+Parameters:
+atol : float
+Absolute tolerance used by tidyup. Default is set via qutip global settings parameters.
+Returns:
+oper : qobj
+Quantum object with small elements removed.
+tr()[source]
+Trace of a quantum object.
+Returns:
+trace : float
+Returns real if operator is Hermitian, returns complex otherwise.
+trans()[source]
+Transposed operator.
+Returns:
+oper : qobj
+Transpose of input operator.
+transform(inpt, inverse=False, sparse=True)[source]
+Basis transform defined by input array.
+Input array can be a matrix defining the transformation, or a list of kets that defines the new basis.
+Parameters:
+inpt : array_like
+A matrix or list of kets defining the transformation.
+inverse : bool
+Whether to return inverse transformation.
+sparse : bool
+Use sparse matrices when possible. Can be slower.
+Returns:
+oper : qobj
+Operator in new basis.
+Notes:
+This function is still in development.
+
+trunc_neg(method='clip')[source]
+Truncates negative eigenvalues and renormalizes.
+Returns a new Qobj by removing the negative eigenvalues of this instance, then renormalizing to obtain a valid density operator.
+Parameters:
+method : str
+Algorithm to use to remove negative eigenvalues. “clip” simply discards negative eigenvalues, then renormalizes. “sgs” uses the SGS algorithm (doi:10/bb76) to find the positive operator that is nearest in the Shatten 2-norm.
+Returns:
+oper : qobj
+A valid density operator.
+unit(norm=None, sparse=False, tol=0, maxiter=100000)[source]
+Operator or state normalized to unity.
+Uses norm from Qobj.norm().
+Parameters:
+norm : str
+Requested norm for states / operators.
+sparse : bool
+Use sparse eigensolver for trace norm. Does not affect other norms.
+tol : float
+Tolerance used by sparse eigensolver.
+maxiter : int
+Number of maximum iterations performed by sparse eigensolver.
+Returns:
+oper : qobj
+Normalized quantum object.
+
+
+
+
+
     </div>
 
     <div class="column side">
@@ -233,7 +769,7 @@
     <a href="../quantuminfo/qinfo.html">Quantum Info</a> |
     <a href="../quantumalgorithm/qalg.html">Quantum Algorithm</a> |
     <a href="../contactus/contactus.html">Contact Us</a> |
-    <a href="../research/research.html">Research</a>"
+    <a href="../research/research.html">Research</a> |
     KSU CS4850 &copy; 2018
     </footer>
 
