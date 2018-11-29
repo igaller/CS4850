@@ -184,17 +184,17 @@
 <div class="header">
 
 <a href="index.html" class="logo">Quantum Computing</a>
-    
+<a id="quantumcomputing"></a>
   <div class="header-right">
-      
+
     <a href="../home.html">Home</a>
-      
+
     <a href="../qutip/qutip.html">Qutip</a>
-      
+
     <a href="../quantuminfo/qinfo.html">Quantum Info</a>
-      
+
     <a class="active" href="quantumalgorithm/qalg.html">Quantum Algorithm</a>
-      
+
     <a href="../contactus/contactus.html">Contact Us</a>
 
     <a href="../research/research.html">Research</a>
@@ -342,15 +342,15 @@ This is for 2 qubits: {0,1} and their various combined states. You can add more 
 <li>This algorithm uses quite a few gates. In the explanation, we use hadamard with an oracle gate as well as the Grover Diffusion operator (or D gate). In this implementation we will be using those gates as well as a few others to generate the circuit as well as the diffusion gate. We will also need some identity gate. We will also set up the qubits needed for this based on how many required qubits we generated: </li>
 <img src="../images/image1121.png">
 <li>After we create the qubits  we will use tensor vector multiplication to place them within a vector. We will do the same for the hadamard gates. Since this algorithm is pretty long, Q  will be qubits all the way through, H means hadamards all the way down and any small letters will be greedy wildcards:</li>
-<img src="../images/image1122.png"> 
+<img src="../images/image1122.png">
 <li>We will then generate the Uf phase inversion gate. This will be used to find the binary value that goes with the position of the item we are searching for. We will go through each bit and put the 0's in a Pauli-X gate (X) while the 1s will go to an I gate: We will use UfXI gate and a CxNot (CNOT gate with a x as a wildcard). After going through, we will calculate the Uf circuit: </li>
 <img src="../images/image1123.png">
 <li>Here we will generate the diffusion operator. This is where the magic happens to flip the values to help us find the value we are seeking. We will combine hadamards for each non-control and identity for control. Where Xs for each non-control and Identity for controls. After that, we will generate the diffusion operator. The gates will be structured as HxI, XxI and CxZI: </li>
 <img src="../images/image1124.png">
 <li>The last bit of operations will be on the control qubits. We will combine operations will only act upon the control qubits. The gates will be IxH and IxX: </li>
 <img src="../images/image1125.png">
-<li>Now where the magic occurs is in this section. We will now do the phase inversion to flip the values of the qubits and we will repeat them pi/4 * sqrt(2^n) times where n is the number of required qubits. This will not include the control qubit in this repeat. 
-We will then find the current states of the Hadamard gates and the Qubits by multiplying them together. Then... the Grover Iteration, where 
+<li>Now where the magic occurs is in this section. We will now do the phase inversion to flip the values of the qubits and we will repeat them pi/4 * sqrt(2^n) times where n is the number of required qubits. This will not include the control qubit in this repeat.
+We will then find the current states of the Hadamard gates and the Qubits by multiplying them together. Then... the Grover Iteration, where
 we will multiply the current state to the Uf circuit, the diffusion circuit and place the state in a quantum object. The last step of the iteration is to apply the identity gates to make the results extremely obvious to us (because it's pretty necessary in the quantum realm to be obvious): </li>
 <img src="../images/image1126.png">
 <li>The moment we've all been waiting for... we will now obtain the results of the Algorithm. We will print out the input function that is generated, the needleposition of that function, the binary position, how many iterations we went through, and how many qubits we generated from that function (including the control qubit). After printing all that information we will find the max state value as well as the min state value from the current state. If the max state is greater, we set the result to max state and vice verse if its min state followed by dividing the result by 2. Print the combined state and get the result. (we add a few asterisk next to the value we are looking for to make it obvious within the command prompt). Double check the result to by looking at the Input function and finding the 1 value within that input. If its equal to 1, then its confirmed, else we got ourselves an error: </li>
@@ -487,6 +487,13 @@ The quantum portion of the algorithm is repeated several times to get a set of s
 <p><b>Gates</b>:  Hadamard, Measurement, Blackbox function B</p>
 <img src="../images/image1150.png">
 
+<h2>Simon’s Algorithm</h2>
+  <ul>
+    <li><a href="https://www.cs.vu.nl/~tcs/ac/ac-11_simon_algorithm.pdf">https://www.cs.vu.nl/~tcs/ac/ac-11_simon_algorithm.pdf</a></li>
+    <li><a href="https://www.youtube.com/watch?v=yhd7V0-BIrs">https://www.youtube.com/watch?v=yhd7V0-BIrs</a></li>
+    <li><a href="https://grove-docs.readthedocs.io/en/latest/simon.html">https://grove-docs.readthedocs.io/en/latest/simon.html</a></li>
+    <li><a href="http://www-inst.eecs.berkeley.edu/~cs191/sp12/notes/simon.pdf">http://www-inst.eecs.berkeley.edu/~cs191/sp12/notes/simon.pdf</a></li>
+  </ul>
 
     </div>
     <div class="column side">
