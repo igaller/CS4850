@@ -436,32 +436,56 @@ Check if the quantum object is hermitian.<br><br>
 <b>Returns:</b>
 <b>isherm </b>: bool
 Returns the new value of isherm property.
-</ul>
-<!--
-conj()[source]
+</ul><br>
+
+<b>conj()</b>[<a href="http://qutip.org/docs/latest/modules/qutip/qobj.html#Qobj.conj">source</a>]
+<ul>
 Conjugate operator of quantum object.
-copy()[source]
+</ul>
+
+<b>copy()</b>[source]
+<ul>
 Create identical copy
-cosm()[source]
-Cosine of a quantum operator.
-Operator must be square.
-Returns:
-oper : qobj
-Matrix cosine of operator.
-Raises:
-TypeError
-Quantum object is not square.
-Notes
+</ul>
+
+<b>cosm()</b>[<a href="http://qutip.org/docs/latest/modules/qutip/qobj.html#Qobj.cosm">source</a>]
+<ul>
+Cosine of a quantum operator.<br>
+Operator must be square.<br><br>
+
+<b>Returns:</b><br>
+<ul>
+<b>oper </b>: qobj<br>
+Matrix cosine of operator.<br>
+</ul><br>
+<b>Raises:</b>
+<ul>
+<b>TypeError</b><br>
+Quantum object is not square.<br>
+</ul><br>
+
+<b>Notes</b><br>
+<ul>
 Uses the Q.expm() method.
-dag()[source]
+</ul><br>
+</ul>
+<b>dag()</b>[<a href="http://qutip.org/docs/latest/modules/qutip/qobj.html#Qobj.dag">source</a>]
+<ul>
 Adjoint operator of quantum object.
-diag()[source]
-Diagonal elements of quantum object.
-Returns:
-diags : array
+</ul><br>
+
+<b>diag()</b>[<a href="http://qutip.org/docs/latest/modules/qutip/qobj.html#Qobj.diag">source</a>]
+<ul>
+Diagonal elements of quantum object.<br><br>
+<b>Returns:</b>
+<b>diags </b>: array<br><br>
+<ul>
 Returns array of real values if operators is Hermitian, otherwise complex values are returned.
-dnorm(B=None)[source]
-Calculates the diamond norm, or the diamond distance to another operator.
+</ul></ul>
+
+<b>dnorm(B=None)</b>[<a href="http://qutip.org/docs/latest/modules/qutip/qobj.html#Qobj.dual_chan">source</a>]<br>
+Calculates the diamond norm, or the diamond distance to another operator.<br>
+<!--
 Parameters:
 B : Qobj or None
 If B is not None, the diamond distance d(A, B) = dnorm(A - B) between this operator and B is returned instead of the diamond norm.
@@ -749,7 +773,6 @@ oper : qobj
 Normalized quantum object.
 
 -->
-
 
 
     </div>
